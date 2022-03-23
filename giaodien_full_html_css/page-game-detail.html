@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .section-1-wrapper {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .section-2-wrapper {
+        position: relative;
+        margin-top: 2rem;
+    }
+
+    .section-3-wrapper {
+        padding: 2rem;
+        width: 100%;
+        position: relative;
+        margin-top: 3rem;
+        background-color: #1B1E1B;
+    }
+
+    .section-4-wrapper {
+        padding: 3rem 3rem 3rem 4rem;
+        width: 100%;
+        position: relative;
+        background-color: #E4E7ED;
+    }
+
+    .section-5-wrapper {
+        padding: 3rem 3rem 3rem 4rem;
+        width: 100%;
+        position: relative;
+        background-color: #1B1E1B;
+    }
+
+    .iframe-lg {
+        width: calc(70% - 2rem);
+        height: 45rem;
+    }
+
+    .game-card-1 {
+        margin-left: 2rem;
+        width: 30%;
+        height: auto;
+
+    }
+
+    .game-card-1 .panel {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background-color: #1B1E1B;
+    }
+
+    .game-card-1 .panel .panel-heading {
+        padding: 0;
+    }
+
+    .game-card-1 img {
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+
+    .panel-footer {
+        margin: 0;
+        display: flex;
+        border: none;
+        background-color: #1B1E1B;
+        justify-content: space-evenly;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .panel-icon-wrapper {
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .panel-icon-wrapper i {
+        font-size: 21px;
+    }
+
+    .panel-body p {
+        text-align: end;
+        font-size: 31.22px;
+        color: white;
+    }
+
+    .img-sm-wrapper {
+        position: relative;
+        width: 100%;
+    }
+
+    .youtube-play-icon {
+        position: absolute;
+        width: 20%;
+        top: 45%;
+        left: 40%;
+    }
+
+    .img-sm {
+        width: 100%;
+
+    }
+
+    .add-cart {
+        color: white;
+        font-size: 21.33px;
+        border: none;
+        border-radius: 3px;
+        background-color: #9CB946;
+        width: 100%;
+        height: 7rem;
+    }
+
+    .add-cart i {
+        margin-right: 1rem;
+    }
+
+
+    .add-wishlist {
+        color: #A3A3A3;
+        background-color: #2E2F2D;
+        font-size: calc(21.33/1.618);
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        height: 4rem;
+
+    }
+
+    .add-wishlist i {
+        margin-right: 1rem;
+    }
+
+    .cells {
+        padding-top: 2rem;
+    }
+
+    .cells i {
+        padding: 0.5rem;
+        border: 1px solid white;
+        font-size: 16px;
+        color: white;
+    }
+
+    .cells p {
+        font-weight: bold;
+        color: #A1A7B2;
+        font-size: 16px;
+    }
+
+    .cells span {
+        font-weight: bold;
+        color: white;
+        font-size: 13px;
+    }
+
+    /* Carousel-css */
+    .carousel {
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    /* The controlsy */
+    .carousel-control {
+        left: -12px;
+        height: 40px;
+        width: 40px;
+        background: none repeat scroll 0 0 #222222;
+        border: 4px solid #FFFFFF;
+        border-radius: 23px 23px 23px 23px;
+        top: 48%;
+    }
+
+    .carousel-control.right {
+        right: -12px;
+    }
+
+    /* The indicators */
+    .carousel-indicators {
+        right: 50%;
+        top: auto;
+        bottom: -10px;
+        margin-right: -19px;
+    }
+
+    /* The colour of the indicators */
+    .carousel-indicators li {
+        background: #cecece;
+    }
+
+    .carousel-indicators .active {
+        background: #428bca;
+    }
+</style>
+
+<body style=" background-color: #282C34;">
+    <!-- NavBar -->
+    <div class="navbar">
+        <nav class="navbar navbar-default" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Title</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </div>
+    <div class="parent-layout">
+        <!-- Section-1 -->
+        <div class="container">
+            <section>
+                <div class="section-1-wrapper">
+                    <iframe class="iframe-lg" src="https://www.youtube.com/embed/rXMX4YJ7Lks"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <!-- Game Card -->
+                    <div class="game-card-1">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide"
+                                    src="https://movieposterhd.com/wp-content/uploads/2019/03/Game-of-Thrones-Wallpaper-HD.jpg">
+                            </div>
+                            <div class="panel-body">
+                                <div class="panel-icon-wrapper">
+                                    <i class="fa fa-windows"></i>
+                                    <i class="fa fa-windows"></i>
+                                </div>
+                                <p>99.99$</p>
+                            </div>
+                            <div class="panel-footer">
+                                <button class="add-cart"><i class="fa fa-shopping-cart"></i>ADD TO CART</button>
+                                <button class="add-wishlist"><i class="fa fa-star"></i>ADD TO WISHLIST</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section-2 -->
+            <section>
+                <div class="section-2-wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="Carousel" class="carousel slide">
+
+                                <ol class="carousel-indicators">
+                                    <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#Carousel" data-slide-to="1"></li>
+                                    <li data-target="#Carousel" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Carousel items -->
+                                <div class="carousel-inner">
+
+                                    <div class="item active">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="img-sm-wrapper">
+                                                    <img class="youtube-play-icon"
+                                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/YouTube_play_buttom_dark_icon_%282013-2017%29.svg/768px-YouTube_play_buttom_dark_icon_%282013-2017%29.svg.png?20170902221125">
+                                                    <img class="img-sm"
+                                                        src="https://img.youtube.com/vi/rXMX4YJ7Lks/hqdefault.jpg">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3"> <img class="img-sm"
+                                                    src="https://img.youtube.com/vi/rXMX4YJ7Lks/hqdefault.jpg">
+                                            </div>
+                                            <div class="col-md-3"> <img class="img-sm"
+                                                    src="https://img.youtube.com/vi/rXMX4YJ7Lks/hqdefault.jpg">
+                                            </div>
+                                            <div class="col-md-3"> <img class="img-sm"
+                                                    src="https://img.youtube.com/vi/rXMX4YJ7Lks/hqdefault.jpg">
+                                            </div>
+                                        </div>
+                                        <!--.row-->
+                                    </div>
+                                    <!--.item-->
+
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                        </div>
+                                        <!--.row-->
+                                    </div>
+                                    <!--.item-->
+
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                            <div class="col-md-3"><a href="#" class="thumbnail"><img
+                                                        src="http://placehold.it/250x250" alt="Image"
+                                                        style="max-width:100%;"></a></div>
+                                        </div>
+                                        <!--.row-->
+                                    </div>
+                                    <!--.item-->
+
+                                </div>
+                                <!--.carousel-inner-->
+                                <a data-slide="prev" href="#Carousel" class="left carousel-control">‹</a>
+                                <a data-slide="next" href="#Carousel" class="right carousel-control">›</a>
+                            </div>
+                            <!--.Carousel-->
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+        <!-- Section-3 -->
+        <section>
+            <div class="section-3-wrapper">
+                <div class="row">
+                    <div class="container">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="row">
+                                <div class="cells">
+                                    <p>PLATFORM</p>
+                                    <i class="fa fa-windows"></i>
+                                    <i class="fa fa-windows"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cells">
+                                    <p>OPERATING SYSTEM</p>
+                                    <i class="fa fa-windows"></i>
+                                    <i class="fa fa-windows"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cells">
+                                    <p>GENRE</p>
+                                    <span>Action, RPG, DatingSim</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                            <div class="row">
+                                <div class="cells">
+                                    <p>DEVELOPER</p>
+                                    <span>Idknow</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="cells">
+                                    <p>PUBLISHER</p>
+                                    <span>FromSoftware</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section-4 -->
+        <section>
+            <div class="section-4-wrapper">
+                <p>VĂN BẢN KHÚC NÀY DÀI VCC LƯỜI CODE VCL ĐỂ SAU ĐÊ</p>
+            </div>
+        </section>
+        <!-- Section-5 -->
+        <section>
+            <div class="section-5-wrapper">
+                <p>VĂN BẢN KHÚC NÀY CŨNG DÀI VCC LƯỜI CODE VCL ĐỂ SAU ĐÊ</p>
+            </div>
+        </section>
+    </div>
+    </div>
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
