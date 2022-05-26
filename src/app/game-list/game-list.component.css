@@ -62,6 +62,7 @@
     display: flex;
     flex-direction: column;
     height: fit-content;
+    
 }
 
 .right-col .item {
@@ -78,6 +79,11 @@
     margin-top: -15px;
 }
 
+.right-col .item .item-left-col i {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
 .right-col .item .item-left-col p {
     margin-top: 5px;
 }
@@ -88,7 +94,8 @@
 }
 
 
-.item-right-col .btn{
+ .btn{
+    margin-top: 8px;
     height: 35px;
     width: 7rem;
     justify-content: center;
@@ -101,7 +108,7 @@
 }    
 
 
-.item-right-col .btn.hover-btn-completed::after
+.btn.hover-btn-completed::after
 {
     content: attr(btn-price);
     text-align: center;
@@ -113,8 +120,7 @@
     transition: all 400ms;
 }    
 
-.item-right-col .btn.hover-btn-completed::before{
-    content: attr(btn-price);
+.btn.hover-btn-completed::before{
     text-align: center;
     width: 100%;
     font-weight: bold;
@@ -123,25 +129,30 @@
     top: 0;
     transition: all 400ms;
     font-size: 0;
+    position: fixed;
 }
 
-.item-right-col .btn.hover-btn-completed:hover::after{
+.btn.hover-btn-completed:hover::after{
     display: none;
-    position: relative;
+    position: absolute;
     top: -36px;
 }  
 
-.item-right-col .btn.hover-btn-completed::before{
+ .btn.hover-btn-completed::before{
+    color: white;
     content: 'Add';
     top: 36px;
 }
 
-.item-right-col .btn.hover-btn-completed:hover::before{
+ .btn.hover-btn-completed:hover::before{
     font-size: small;
     position: relative;
     top: 0;
 }  
-
+ .btn:hover{
+    border: rgb(117, 195, 117);
+    background-color: rgb(117, 195, 117);
+}  
 
 .featured {
     width: 100%;
@@ -192,9 +203,17 @@
 }
 
 .game-card-1 .panel .panel-footer {
-    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
+}
+
+.game-card-1 .panel .panel-footer .left-footer i{
+    margin-left: 10px;
+    line-height: 3.5;
+}
+
+.game .panel-body{
+    font-weight: bold;
 }
 
 .game-list {
@@ -208,4 +227,27 @@
     width: calc(25% - 2rem);
     margin-right: 2rem;
     margin-top: 3rem;
+}
+
+.searchbar input{
+    width: 30rem;
+    height: 36px;
+    position: relative;
+    background-color: #363636;
+    border: 1px solid #363636;
+    color: white;
+}
+.searchbar i{
+    font-size: 24px;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+.searchbar{
+    margin-left: 14rem;
+    display: flex;
+}
+.navbar {
+    background-color: #3B3E48;
 }
