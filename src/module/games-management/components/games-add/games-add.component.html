@@ -1,0 +1,121 @@
+<div>
+    <div class="admin-header">
+        <p>Thêm sản phẩm</p>
+    </div>
+    <div class="container" style=" padding: 2rem ">
+        <div style=" display: flex; flex-direction: column ">
+            <div class="card"style=" background-color: white; width: 60rem; marginLeft: 8%; padding: 1rem ">
+                <!-- {/*Parent div class="row" 1*/} -->
+                <div class="row" style=" margin: 0.2rem; margin-top: 1rem; margin-bottom: 1rem; padding: 1rem ">
+                    <h5>Thông tin chung</h5>
+                    <div class="container" style=" margin-top: 3rem ">
+                        <div class="col">
+                            <div style=" display: flex; justify-content: space-between ">
+                                <div className="product-details-table">
+                                    <Table striped bordered style=" width: 30rem ">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">1</td>
+                                                <td style=" padding: 5px ">Tên</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="name" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">2</td>
+                                                <td style=" padding: 5px ">Tên ngắn</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="short_name" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">3</td>
+                                                <td style=" padding: 5px ">Thể loại</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="type" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">4</td>
+                                                <td style=" padding: 5px ">Tiêu đề</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="title" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">5</td>
+                                                <td style=" padding: 5px ">Mô tả</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="description" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">6</td>
+                                                <td style=" padding: 5px ">Nhà phát triển</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="developer" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">7</td>
+                                                <td style=" padding: 5px ">Nhà phát hành</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="publisher" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">8</td>
+                                                <td style=" padding: 5px ">Ngày ra mắt</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="release_date" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">9</td>
+                                                <td style=" padding: 5px ">Nền tảng</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="platform" size="sm" type="text" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">10</td>
+                                                <td style=" padding: 5px ">Giá mua</td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="purchase_price" size="sm" type="number" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">11</td>
+                                                <td style=" padding: 5px ">Giá bán </td>
+                                                <td style=" padding: 0px "><input type="text" class="form-control" style=" width: 100%; height: 3rem " onChange={this.onChange} name="sale_price" size="sm" type="number" placeholder="Nhập vào" /></td>
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">12</td>
+                                                <td style=" padding: 5px ">Tags</td>
+                                                <!-- <td><Tag tags={product.tag} /></td> -->
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">13</td>
+                                                <td style=" padding: 5px ">Keys</td>
+                                                <!-- <td><Key keys={product.keys} /></td> -->
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">14</td>
+                                                <td style=" padding: 5px ">Includes</td>
+                                                <!-- <td><Include include={product.includes} games={games} /></td> -->
+                                            </tr>
+                                            <tr className="tr-edit">
+                                                <td style=" padding: 5px ">15</td>
+                                                <td style=" padding: 5px ">Includes in</td>
+                                                <!-- <td><IncludeIn include={product.included_in} games={games} /></td> -->
+                                            </tr>
+                                        </tbody>
+                                    </Table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- {/*Parent div class="row" 2 */} -->
+                <div class="row" style=" display: flex; margin: 0.2rem; margin-bottom: 1rem; padding: 1rem ">
+                    <p style=" font-size: 12px ">Videos</p>
+                    <Button variant="secondary" style=" width: 3rem; margin: 0.6rem ">+</Button>
+                    <div class="row">
+                        <!-- {this.showVideos(product.videos)} -->
+                    </div>
+                </div>
+                <!-- {/*Parent div class="row" 3 */} -->
+                <div class="row" style=" display: flex; margin: 0.2rem; margin-bottom: 1rem; padding: 1rem ">
+                    <p style=" font-size: 12px ">Hình ảnh</p>
+                    <Button variant="secondary" style=" width: 3rem; margin: 0.6rem " >+</Button>
+                    <div class="row">
+                        <!-- {this.showImages(product.images)} -->
+                    </div>
+                </div>
+                <Button variant="secondary" style=" margin-left: 50rem; width: 5rem ">Thêm</Button>
+            </div>
+        </div>
+    </div>
+</div>

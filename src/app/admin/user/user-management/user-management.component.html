@@ -1,0 +1,44 @@
+<div class="admin-header">
+    <p>Quản lý người dùng</p>
+</div>
+<div class="card" style="padding: 1rem; 
+ margin-left:1rem; 
+ display: flex; 
+ flex-direction: column; 
+ border: none;"></div>
+
+<div class="container">
+    <button class="btn btn-default" style="float: right; margin-bottom:1rem; margin-top: 1rem;">Thêm +</button>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Tên </th>
+                    <th>Sinh nhật</th>
+                    <th>Active</th>
+                    <th>Email</th>
+                    <th>SDT</th>
+                    <th>Facebook ID</th>
+                    <th>Google ID</th>
+                    <th>Email verification</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>ID</td>
+                    <td>{{user.first_name + " " +user.last_name}}</td>
+                    <td>{{user.birthday}}</td>
+                    <td>{{user.active ? "Còn hoạt động" : "Đã hủy"}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone_number}}</td>
+                    <td>{{user.facebook_id}}</td>
+                    <td>{{user.google_id}}</td>
+                    <td>{{user.email_verification}}</td>
+                    <!-- <td>{{this.countActiveKeys(game.keys)}}</td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+<div class="admin-header">
+    <p>Quản lý Vocher</p>
+</div>
+<div class="container">
+    <div class="card" style="padding: 1rem; margin-left: 1rem; display: flex; flex-direction: column;"></div>
+    <!-- <Link to="/admin/add_game"> -->
+    <button class="btn btn-default" style="float: right; margin-bottom:1rem; margin-top: 1rem;">Thêm +</button>
+    <!-- </Link> -->
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Id</th>
+                    <th>Mã vocher</th>
+                    <th>Discount</th>
+                    <th>Ngày tạo</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vocher of vochers">
+                    <td></td>
+                    <td>ID</td>
+                    <td>{{vocher.code}}</td>
+                    <td>{{vocher.discount}}</td>
+                    <td>{{vocher.create_date}}</td>
+                    <td>{{vocher.time_expired}}</td>
+                    <td>{{vocher.status ? "Còn hạn" : "Hết hạn" }}</td>
+                    <td>
+                    <button type="button" class="btn btn-default">Edit</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" style="margin-top: 1rem; float:right">
+        <div class="row" style="margin-top: 1rem; float:right">
+            <!-- <ReactPaginate className='phantrang' previousLabel={"prev"} nextLabel={"next"} breakLabel={"..."}
+                        breakClassName={"break-me"} pageCount={this.state.pageCount} marginPagesDisplayed={2}
+                        pageRangeDisplayed={5} onPageChange={this.handlePageClick} containerClassName={"pagination"}
+                        subContainerClassName={"pages pagination"} activeClassName={"active"} disable={true} /> -->
+        </div>
+    </div>
+</div>

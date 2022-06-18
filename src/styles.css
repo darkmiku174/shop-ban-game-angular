@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.admin-header {
+    background-color: #F4F6F9;
+    height: 56px;
+    padding: 1rem;
+    padding-left: 8rem;
+}
+
+.admin-header p {
+    font-size: 23px;
+    font-family: Roboto;
+}

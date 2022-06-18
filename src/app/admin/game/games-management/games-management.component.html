@@ -1,0 +1,55 @@
+<div class="admin-header">
+    <p>Quản lý sản phẩm</p>
+</div>
+<div class="container">
+    <div class="card" style="padding: 1rem; margin-left: 1rem; display: flex; flex-direction: column;"></div>
+    <!-- <Link to="/admin/add_game"> -->
+
+    <!-- </Link> -->
+    <div class="table-responsive">
+        <button class="btn btn-default admin" style="margin-bottom:1rem;float:right;">Thêm +</button>
+        <table class="table table-hover" style="border: 1px solid gray;">
+            <thead>
+                <tr>
+                    <th>Tên sản phẩm</th>
+                    <th>Loại</th>
+                    <th>Nhà phát triển</th>
+                    <th>Nhà phát hành</th>
+                    <th>Ngày xuất bản</th>
+                    <th>Hệ điều hành</th>
+                    <th>Giá mua</th>
+                    <th>Giá bán</th>
+                    <th>Giảm giá</th>
+                    <th>Kho</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of products">
+                    <td>{{product._id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.type}}</td>
+                    <td>{{product.developer}}</td>
+                    <td>{{product.publisher}}</td>
+                    <td>{{product.release_date}}</td>
+                    <td>{{product.platform}}</td>
+                    <td>{{product.purchase_price}}</td>
+                    <td>{{product.sale_price}}</td>
+                    <td>{{product.discount_price + "%"}}</td>
+                    <!-- <td>{{this.countActiveKeys(game.keys)}}</td> -->
+                    <td>
+                        <button (click)="onDeleteProduct(product._id)" type="button" class="btn btn-default">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row" style="margin-top: 1rem; float:right">
+        <div class="row" style="margin-top: 1rem; float:right">
+            <!-- <ReactPaginate className='phantrang' previousLabel={"prev"} nextLabel={"next"} breakLabel={"..."}
+                        breakClassName={"break-me"} pageCount={this.state.pageCount} marginPagesDisplayed={2}
+                        pageRangeDisplayed={5} onPageChange={this.handlePageClick} containerClassName={"pagination"}
+                        subContainerClassName={"pages pagination"} activeClassName={"active"} disable={true} /> -->
+        </div>
+    </div>
+</div>
