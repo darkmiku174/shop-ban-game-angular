@@ -152,27 +152,3 @@ h2 {
     color:white
 }
 
-/* game detail card */
-.game-detail-card{
-    color: white;
-    width: 100%;
-    position: relative;
-}
-
-.first-row {
-
-    width: 100%;
-}
-.first-row .col-8{
-    padding-top: 40px;
-}
-
-.first-row .edition-tag{
-    padding: 8px 2px 8px 4px;
-    background-color: gray;
-    border-radius: 5px;
-}
-.first-row img{
-    width: 100%;
-    height: 10rem;
-}

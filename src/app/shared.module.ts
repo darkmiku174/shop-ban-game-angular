@@ -9,10 +9,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 @NgModule({
     imports: [ReactiveFormsModule,NgbModule,NgbCarouselModule, CommonModule, MatCommonModule, MatToolbarModule, MatFormFieldModule, MatIconModule],
     declarations: [],
     exports: [
+        MatCheckboxModule,
         ReactiveFormsModule,
         MatSelectModule,
         NgbModule,
