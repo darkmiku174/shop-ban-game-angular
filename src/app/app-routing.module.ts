@@ -1,10 +1,10 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { GameManagementComponent } from "./user/game-management/game-management.component";
-import { HomeComponent } from "./product-management/components/home/home.component"
+import { HomeComponent } from "./user/game-management/home/home.component";
+import { GameDetailComponent } from "./user/game-management/game-detail/game-detail.component";
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'game', component: GameManagementComponent }
+  { path: '', component: HomeComponent },
+  { path: 'game_detail', component: GameDetailComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
@@ -13,4 +13,4 @@ const appRoutes: Routes = [
 export class AppRoutingModule {
 
 }
-export const routingComponents = [GameManagementComponent]
+export const routingComponents = [HomeComponent]

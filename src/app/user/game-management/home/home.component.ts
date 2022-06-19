@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-game-management',
-  templateUrl: './game-management.component.html',
-  styleUrls: ['./game-management.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class GameManagementComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
 

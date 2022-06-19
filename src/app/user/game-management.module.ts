@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared.module';
-import { GameManagementComponent } from '../game-management.component';
+import { HomeComponent } from 'src/app/product-management/components/home/home.component';
+import { GameDetailComponent } from './game-management/game-detail/game-detail.component';
+
+
 @NgModule({
   declarations: [
-    GameManagementComponent
+    HomeComponent,
+    GameDetailComponent,
   ],
   imports: [
     CommonModule,

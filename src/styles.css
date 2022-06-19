@@ -14,9 +14,6 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.header-right mat-form-field {
-    
-}
 
 .header-left {
     display: inline-block;

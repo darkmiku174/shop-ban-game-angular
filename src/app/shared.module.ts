@@ -6,12 +6,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
-    imports: [NgbModule,NgbCarouselModule, CommonModule, MatCommonModule, MatToolbarModule, MatFormFieldModule, MatIconModule],
+    imports: [ReactiveFormsModule,NgbModule,NgbCarouselModule, CommonModule, MatCommonModule, MatToolbarModule, MatFormFieldModule, MatIconModule],
     declarations: [],
     exports: [
+        ReactiveFormsModule,
+        MatSelectModule,
         NgbModule,
         NgbCarouselModule,
         FormsModule,
