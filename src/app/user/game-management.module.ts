@@ -5,6 +5,8 @@ import { HomeComponent } from 'src/app/product-management/components/home/home.c
 import { GameDetailComponent } from './game-management/game-detail/game-detail.component';
 import { GameSearchComponent } from './game-management/game-search/game-search.component';
 import { GameCartComponent } from './game-management/game-cart/game-cart.component';
+import { GamePaymentComponent } from './game-management/game-payment/game-payment.component';
+import { GameLoginComponent } from './game-management/game-login/game-login.component';
 
 
 @NgModule({
@@ -13,6 +15,8 @@ import { GameCartComponent } from './game-management/game-cart/game-cart.compone
     GameDetailComponent,
     GameSearchComponent,
     GameCartComponent,
+    GamePaymentComponent,
+    GameLoginComponent,
   ],
   imports: [
     CommonModule,
