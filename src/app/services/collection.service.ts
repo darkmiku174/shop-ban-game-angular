@@ -14,4 +14,10 @@ export class CollectionService {
   getHotCollection(): Observable<Collection> {
     return this.http.get<Collection>(this.API + '61accfa63bd1a62f4346b907')
   }
+  getTopSaleCollection(): Observable<Collection> {
+    return this.http.get<Collection>(this.API + '61accfa63bd1a62f4346b912')
+  }
+  getNewReleaseCollection(): Observable<Collection> {
+    return this.http.get<Collection>(this.API + '61accfa63bd1a62f4346b908')
+  }
 }

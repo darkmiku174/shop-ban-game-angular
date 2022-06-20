@@ -8,7 +8,7 @@ import { GamePaymentComponent } from "./user/game-management/game-payment/game-p
 import { GameLoginComponent } from "./user/game-management/game-login/game-login.component";
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'detail', component: GameDetailComponent },
+  { path: 'games/:id', component: GameDetailComponent },
   { path: 'cart', component: GameCartComponent },
   { path: 'search', component: GameSearchComponent },
   { path: 'payment', component: GamePaymentComponent },

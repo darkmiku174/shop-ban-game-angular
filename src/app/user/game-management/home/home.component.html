@@ -1,231 +1,147 @@
 <header class="header">
-    <mat-toolbar-row>
-        <div class="search-bar">
-            <div class="search">
-                <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
-                    search
-                </mat-icon>
-            </div>
-            <input type="text" placeholder="Search...">
-        </div>
-        <div class="icon-group">
-            <div class="shopping-cart">
-                <a href="http://localhost:4200/cart">
-                    <button>
-                        <mat-icon class="shopping-cart" aria-hidden="false" aria-label="Example user verified icon">
-                            shopping_cart
-                        </mat-icon>
-                    </button>
-                </a>
-            </div>
-            <div class="person">
-                <button (click)="openDialog()">
-                    <mat-icon class="person" aria-hidden="false" aria-label="Example user verified icon">
-                        person
-                    </mat-icon>
-                </button>
-            </div>
-        </div>
+  <mat-toolbar-row>
+    <div class="search-bar">
+      <div class="search">
+        <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
+          search
+        </mat-icon>
+      </div>
+      <input type="text" placeholder="Search...">
+    </div>
+    <div class="icon-group">
+      <div class="shopping-cart">
+        <a href="http://localhost:4200/cart">
+          <button>
+            <mat-icon class="shopping-cart" aria-hidden="false" aria-label="Example user verified icon">
+              shopping_cart
+            </mat-icon>
+          </button>
+        </a>
+      </div>
+      <div class="person">
+        <button (click)="openDialog()">
+          <mat-icon class="person" aria-hidden="false" aria-label="Example user verified icon">
+            person
+          </mat-icon>
+        </button>
+      </div>
+    </div>
 
-    </mat-toolbar-row>
+  </mat-toolbar-row>
 </header>
 
 <body>
-    <div class="container">
-        <div class="size-box"></div>
-        <div class="row">
-            <div class="col-1">
-                <p class="category-text">Discover</p>
-            </div>
-            <div class="col-1">
-                <p class="category-text">Browse</p>
-            </div>
-            <div class="col-10">
-            </div>
-        </div>
-        <!-- big-banner -->
-        <div class="row">
-            <!-- left-collumn -->
-            <div class="col-8">
-                <ngb-carousel *ngIf="images">
-                    <ng-template ngbSlide>
-                        <div class="picsum-img-wrapper">
-                            <img [src]="images[0]" alt="Random first slide">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </div>
-                    </ng-template>
-                    <ng-template ngbSlide>
-                        <div class="picsum-img-wrapper">
-                            <img [src]="images[1]" alt="Random second slide">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </ng-template>
-                    <ng-template ngbSlide>
-                        <div class="picsum-img-wrapper">
-                            <img [src]="images[2]" alt="Random third slide">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </div>
-                    </ng-template>
-                </ngb-carousel>
-            </div>
-            <!-- right-collumn -->
-            <div class="col-4">
-                <div class="game-slider">
-                    <div class="game-slider-item">
-                        <img
-                            src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
-                        <p>Subnautica Below zero</p>
-                    </div>
-                    <div class="game-slider-item">
-                        <img
-                            src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
-                    </div>
-                    <div class="game-slider-item">
-                        <img
-                            src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
-                    </div>
-                    <div class="game-slider-item">
-                        <img
-                            src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
-                    </div>
-                    <div class="game-slider-item">
-                        <img
-                            src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
-                    </div>
-                    <div class="game-slider-item">
-                        <img
-                            src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- top-sale -->
-        <div class="size-box"></div>
-        <h2 class="category-title">Top sale</h2>
-        <div class="game-card-row">
-            <div class="row">
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- New release -->
-        <div class="size-box"></div>
-        <h2 class="category-title">New Release</h2>
-        <div class="game-card-row">
-            <div class="row">
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                    </div>
-                    <div class="game-card-text">
-                        <p class="title">Among us</p>
-                        <p class="publisher">Sussy</p>
-                        <p class="price">40$</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="size-box"></div>
+    <div class="row">
+      <div class="col-1">
+        <p class="category-text">Discover</p>
+      </div>
+      <div class="col-1">
+        <p class="category-text">Browse</p>
+      </div>
+      <div class="col-10">
+      </div>
     </div>
+    <!-- big-banner -->
+    <div class="row">
+      <!-- left-collumn -->
+      <div class="col-8">
+        <ngb-carousel *ngIf="images">
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="images[0]" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="images[1]" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </ng-template>
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="images[2]" alt="Random third slide">
+            </div>
+            <div class="carousel-caption">
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </div>
+          </ng-template>
+        </ngb-carousel>
+      </div>
+      <!-- right-collumn -->
+      <div class="col-4">
+        <div class="game-slider">
+          <div class="game-slider-item">
+            <img src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
+            <p>Subnautica Below zero</p>
+          </div>
+          <div class="game-slider-item">
+            <img src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
+          </div>
+          <div class="game-slider-item">
+            <img src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
+          </div>
+          <div class="game-slider-item">
+            <img src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
+          </div>
+          <div class="game-slider-item">
+            <img src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
+          </div>
+          <div class="game-slider-item">
+            <img src="https://khiphach.vn/wp-content/uploads/2019/06/download-game-subnautica-below-zero-viet-hoa.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- top-sale -->
+    <div class="size-box"></div>
+    <h2 class="category-title">Top sale</h2>
+    <div class="game-card-row">
+      <div class="row">
+        <div class="col" *ngFor="let game of this.topSaleCollection.list_game; index as i">
+          <ng-container *ngIf="this.i<5">
+            <div class="game-card">
+              <img [src]="game.images[0].url">
+            </div>
+            <div class="game-card-text">
+              <p class="title">{{game.name}}</p>
+              <p class="publisher">{{game.publisher}}</p>
+              <p class="price">{{game.sale_price+"$"}}</p>
+            </div>
+          </ng-container>
 
+        </div>
 
+      </div>
+    </div>
+    <!-- New release -->
+    <div class="size-box"></div>
+    <h2 class="category-title">New Release</h2>
+    <div class="game-card-row">
+      <div class="row">
+        <div class="col" *ngFor="let game of this.newReleaseCollection.list_game">
+          <div class="game-card">
+            <img [src]="game.images[0].url">
+          </div>
+          <div class="game-card-text">
+            <p class="title">{{game.name}}</p>
+            <p class="publisher">{{game.publisher}}</p>
+            <p class="price">{{game.sale_price+"$"}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <footer>
-    <h1>footer</h1>
+  <h1>footer</h1>
 </footer>
