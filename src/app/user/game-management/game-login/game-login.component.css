@@ -1,0 +1,79 @@
+.login-body {
+    padding: 16px;
+    background-color: rgb(99, 99, 99);
+}
+
+
+::ng-deep .mat-dialog-container {
+    padding: 0;
+    width: 500px;
+    height: fit-content;
+}
+
+mat-form-field {
+    border-radius: 5px;
+    width: 100%;
+}
+
+mat-form-field mat-label {
+    color: white;
+}
+
+.size-box {
+    height: 1rem;
+}
+
+.login-btn {
+    height: 52px;
+    color: white;
+    width: 100%;
+    background-color: rgb(35, 105, 255);
+}
+
+.text {
+    color: rgb(35, 105, 255);
+    position: relative;
+    text-align: end;
+    padding: 8px 8px 8px 0px;
+}
+
+.decorate {
+    display: flex;
+    flex-direction: row;
+    color: white;
+}
+
+.decorate:before, .decorate:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid gray;
+    margin: auto;
+}
+
+.decorate:before {
+    margin-right: 10px
+}
+
+.decorate:after {
+    margin-left: 10px
+}
+
+.facebook-btn {
+    margin-top: 1rem;
+    height: 52px;
+    color: white;
+    width: 100%;
+    background-color: rgb(35, 105, 255);
+}
+
+.google-btn {
+    margin-top: 1rem;
+    height: 52px;
+    color: white;
+    width: 100%;
+    background-color: white;
+}
+.google-btn img{
+    position: relative;
+    width: 24px;
+}
