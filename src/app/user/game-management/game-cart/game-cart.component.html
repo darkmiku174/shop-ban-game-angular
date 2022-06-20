@@ -1,46 +1,69 @@
 <header class="header">
     <mat-toolbar-row>
-        <div class="header-right">
-            <mat-form-field>
-                <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">search
+        <div class="search-bar">
+            <div class="search">
+                <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
+                    search
                 </mat-icon>
-                <input type="text" matInput placeholder="Search...">
-                <div class="cart">
-                    <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">shopping_cart
-                    </mat-icon>
-                </div>
-                <div class="user">
-                    <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">person
-                    </mat-icon>
-                </div>
-            </mat-form-field>
+            </div>
+            <input type="text" placeholder="Search...">
         </div>
-
     </mat-toolbar-row>
 </header>
 
 <body>
     <div class="container">
+        <div class="size-box"></div>
+        <h2>Cart Detail</h2>
         <div class="cart">
             <div class="row">
                 <div class="col-8">
+                    <!-- Cart detail card -->
                     <div class="cart-card">
                         <div class="row">
                             <div class="col-4">
                                 <img
                                     src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-9790e96a8d2a08325bd7b4dc70148127?h=270&resize=1&w=480">
-                                >
                             </div>
                             <div class="col-8">
-                                <div>far cry</div>
-                                <div>Ubisoft</div>
-                                <div>$60</div>
+                                <div class="cart-detail">
+                                    <div class="cart-detail-top">
+                                        <p class="title">Farcry</p>
+                                        <div style="height:8px"></div>
+                                        <p class="publisher">Ubisoft</p>
+                                        <div style="height:8px"></div>
+                                        <p class="price">$60</p>
+                                    </div>
+                                    <div class="cart-detail-bottom">
+                                        <div class="increment-button">
+                                            <button class="increase-1" mat-button color="primary">-</button>
+                                            <div class="number">
+                                                1
+                                            </div>
+                                            <button class="increase-2" mat-button color="primary">+</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
-                <div class="col-4" style="color: white;">
-                    TAO DI NGU LAM HET NOI R
+                <div class="col-4">
+                    <!-- Cart detail summary -->
+                    <div class="cart-summary">
+                        <p>Coupon</p>
+                        <div class="coupon-card">
+                            $10 Discount
+                        </div>
+                        <div class="decorate"> </div>
+                        <div class="total">
+                            <span>Total</span>
+                            <div class="price">$60</div>
+                        </div>
+                    </div>
+                    <div class="size-box"></div>
+                    <button class="checkout-btn" mat-button color="primary">PROCEED TO CHECKOUT</button>
                 </div>
             </div>
         </div>
