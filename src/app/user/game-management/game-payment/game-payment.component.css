@@ -1,0 +1,156 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #121212;
+}
+
+/* Search-bar */
+.search-bar {
+    width: 15rem;
+    position: relative;
+    float: right;
+    right: 11rem;
+    bottom: 22px;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 40px;
+    padding-left: 50px;
+
+}
+
+.search-bar input {
+    background-color: gray;
+    border-radius: 5px;
+
+}
+
+.search-bar ::placeholder {
+    color: black;
+}
+
+.search-bar .search mat-icon {
+    position: relative;
+    top: 38px;
+    left: 8px;
+    color: white;
+}
+
+.shopping-cart mat-icon {
+
+    color: white;
+}
+
+.person mat-icon {
+    margin-left: 1rem;
+    color: white;
+}
+
+.icon-group{
+    position: absolute;
+    top: 17px;
+    left: 88%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.decorate {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid gray;
+}
+
+.size-box {
+    height: 2rem;
+}
+
+/* cart detail list */
+.cart-detail-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-detail {
+    border-radius: 5px;
+    padding: 8px;
+    background-color: rgb(99, 99, 99);
+    position: relative;
+    width: 100%;
+}
+
+.cart-detail img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.cart-detail p {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 8px;
+}
+
+
+.title {
+    color: white;
+    font-size: 16px;
+}
+
+.publisher {
+    color: rgb(75, 75, 75);
+}
+
+.price {
+    color: white;
+    font-size: 21px;
+}
+
+h2 {
+    color: white;
+}
+
+.payment-container {
+    width: 100%;
+    height: fit-content;
+    padding: 8px;
+    background-color: rgb(99, 99, 99);
+}
+
+/* Expansion panel */
+mat-expansion-panel input {
+    width: 100%;
+}
+
+mat-expansion-panel {
+    background-color: gray;
+    margin-top: 1rem;
+}
+
+mat-panel-title {
+    color: white;
+}
+
+.pay-btn {
+    margin-top: 1rem;
+    height: 48px;
+    color: white;
+    width: 100%;
+    background-color: rgb(35, 105, 255);
+}
+
+::ng-deep .mat-expansion-indicator:after {
+    color: rgb(35, 105, 255);
+}
+
+.payment-container span {
+    color: white;
+}
