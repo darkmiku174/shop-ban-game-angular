@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { GameLoginComponent } from '../game-login/game-login.component';
 
 @Component({
   selector: 'app-game-payment',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamePaymentComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openDialog(){
+    this.dialog.open(GameLoginComponent);
   }
 
 }

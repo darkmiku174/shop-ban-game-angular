@@ -8,17 +8,23 @@
             </div>
             <input type="text" placeholder="Search...">
         </div>
-        <div class="icon-group">  <div class="shopping-cart">
-            <mat-icon class="shopping-cart" aria-hidden="false" aria-label="Example user verified icon">
-                shopping_cart
-            </mat-icon>
+        <div class="icon-group">
+            <div class="shopping-cart">
+                <button (click)="openDialog()">
+                    <mat-icon class="shopping-cart" aria-hidden="false" aria-label="Example user verified icon">
+                        shopping_cart
+                    </mat-icon>
+                </button>
+            </div>
+            <div class="person">
+                <button (click)="openDialog()">
+                    <mat-icon class="person" aria-hidden="false" aria-label="Example user verified icon">
+                        person
+                    </mat-icon>
+                </button>
+            </div>
         </div>
-        <div class="person">
-            <mat-icon class="person" aria-hidden="false" aria-label="Example user verified icon">
-                person
-            </mat-icon>
-        </div></div>
-      
+
     </mat-toolbar-row>
 </header>
 
