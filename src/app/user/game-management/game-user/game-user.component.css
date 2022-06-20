@@ -1,0 +1,47 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #121212;
+}
+
+.tab-container {
+    margin-left: 25%;
+    background-color: rgb(62, 62, 62);
+    padding: 16px;
+    width: fit-content;
+    height: fit-content;
+    border-radius:5px;
+}
+
+h2 {
+    color: white;
+}
+
+
+::ng-deep .mat-tab-label-content {
+    color: white;
+}
+
+mat-label {
+    color: gray;
+}
+
+mat-icon {
+    color: gray;
+}
+
+
+.game-detail img{
+    position: relative;
+    width: 100%;
+
+}
+.payment-container{
+    position: relative;
+    width: 100%;
+}
