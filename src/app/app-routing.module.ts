@@ -8,11 +8,11 @@ import { GamePaymentComponent } from "./user/game-management/game-payment/game-p
 import { GameLoginComponent } from "./user/game-management/game-login/game-login.component";
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'game_detail', component: GameDetailComponent },
-  { path: 'game_cart', component: GameCartComponent },
-  { path: 'game_search', component: GameSearchComponent },
-  { path: 'game_payment', component: GamePaymentComponent },
-  { path: 'game_login', component: GameLoginComponent },
+  { path: 'detail', component: GameDetailComponent },
+  { path: 'cart', component: GameCartComponent },
+  { path: 'search', component: GameSearchComponent },
+  { path: 'payment', component: GamePaymentComponent },
+  { path: 'login', component: GameLoginComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],

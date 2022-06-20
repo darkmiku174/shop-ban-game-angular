@@ -1,0 +1,31 @@
+<header class="header">
+    <mat-toolbar-row>
+        <div class="search-bar">
+            <div class="search">
+                <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
+                    search
+                </mat-icon>
+            </div>
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="icon-group">
+            <div class="shopping-cart">
+                <a href="http://localhost:4200/cart">
+                    <button>
+                        <mat-icon class="shopping-cart" aria-hidden="false" aria-label="Example user verified icon">
+                            shopping_cart
+                        </mat-icon>
+                    </button>
+                </a>
+            </div>
+            <div class="person">
+                <button (click)="openDialog()">
+                    <mat-icon class="person" aria-hidden="false" aria-label="Example user verified icon">
+                        person
+                    </mat-icon>
+                </button>
+            </div>
+        </div>
+
+    </mat-toolbar-row>
+</header>

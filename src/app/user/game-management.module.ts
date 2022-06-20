@@ -7,6 +7,7 @@ import { GameSearchComponent } from './game-management/game-search/game-search.c
 import { GameCartComponent } from './game-management/game-cart/game-cart.component';
 import { GamePaymentComponent } from './game-management/game-payment/game-payment.component';
 import { GameLoginComponent } from './game-management/game-login/game-login.component';
+import { HeaderComponent } from './game-management/header/header.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { GameLoginComponent } from './game-management/game-login/game-login.comp
     GameCartComponent,
     GamePaymentComponent,
     GameLoginComponent,
+    HeaderComponent,
   ],
   imports: [
     CommonModule,
