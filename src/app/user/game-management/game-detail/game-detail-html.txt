@@ -14,12 +14,13 @@
             </div>
         </div>
         <!-- big-banner -->
-        <h2>{{this.product.name}}</h2>
         <div class="row">
             <!-- left-collumn -->
             <div class="col-8">
+                <h2>Dead by daylight</h2>
                 <div class="big-banner">
-                    <img [src]="this.product.images[0].url">
+                    <img
+                        src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-9790e96a8d2a08325bd7b4dc70148127?h=270&resize=1&w=480">
                 </div>
                 <div class="size-box"></div>
                 <div class="game-detail">
@@ -37,7 +38,77 @@
                         <p>Dive into asdhasdasdhasukdhsadls hadkjashdkjsahdkjasdhaskjdhas kjdsahkdasjsadjkashdkja
                             shdasdkjashdaskjdas khdasdhjskjaskadshkadshadsh</p>
                     </div>
-                    <!-- Add on -->
+                    <!-- Editon -->
+                    <div class="edition">
+                        <h2>Edition</h2>
+                        <div class="game-detail-card">
+                            <div class="first-row">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img
+                                            src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-f2a7ae8676457d052c1344ce717dfb7a?h=854&resize=1&w=640">
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="edition-tag">
+                                            EDITION
+                                        </span>
+                                        <span class="edition-title">
+                                            Ultimate Edition
+                                        </span>
+                                        <div class="size-box"></div>
+                                        <div class="edition-description">
+                                            asdasda a sdasdasdasdasd asdasdad asdasdasdsad asdasdasd asdasdasd asdasd
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="second-row">
+                                    <div class="row">
+                                        <div class="col-4"></div>
+                                        <div class="col-8"> <span>$60</span>
+                                            <button class="buy-btn" mat-button color="primary">PROCEED TO
+                                                CHECKOUT</button>
+                                            <button class="wishlist-btn" mat-button color="primary">PROCEED TO
+                                                CHECKOUT</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Add-on -->
+                    <div class="size-box"></div>
+                    <div class="add-on">
+                        <h2>Edition</h2>
+                        <div class="game-detail-card">
+                            <div class="first-row">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img
+                                            src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-f2a7ae8676457d052c1344ce717dfb7a?h=854&resize=1&w=640">
+                                    </div>
+                                    <div class="col-8">
+                                        <span class="edition-tag">
+                                            EDITION
+                                        </span>
+                                        <span class="edition-title">
+                                            Ultimate Edition
+                                        </span>
+                                        <div class="size-box"></div>
+                                        <div class="edition-description">
+                                            asdasda a sdasdasdasdasd asdasdad asdasdasdsad asdasdasd asdasdasd asdasd
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="second-row">
+                                <div class="row"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Review -->
                     <div class="size-box"></div>
                     <div class="review">
                         <h2>Edition</h2>
@@ -49,31 +120,21 @@
                                             src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-f2a7ae8676457d052c1344ce717dfb7a?h=854&resize=1&w=640">
                                     </div>
                                     <div class="col-8">
-                                        <span class="tag">
+                                        <span class="edition-tag">
                                             EDITION
                                         </span>
-                                        <span class="title">
+                                        <span class="edition-title">
                                             Ultimate Edition
                                         </span>
                                         <div class="size-box"></div>
-                                        <div class="description">
+                                        <div class="edition-description">
                                             asdasda a sdasdasdasdasd asdasdad asdasdasdsad asdasdasd asdasdasd asdasd
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="second-row">
-                                <div class="row">
-                                    <div class="col-4">
-
-                                    </div>
-                                    <div class="col-8">
-                                        <span>$60</span>
-                                        <button class="buy-btn">BUY NOW</button>
-                                        <button class="wishlist-btn">ADD TO CART +</button>
-                                    </div>
-
-                                </div>
+                                <div class="row"></div>
                             </div>
                         </div>
                     </div>
@@ -85,29 +146,10 @@
                     <img
                         src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-f2a7ae8676457d052c1344ce717dfb7a?h=854&resize=1&w=640">
                 </div>
-                <div style="height:1rem"></div>
-                <div class="tag-card">BASE GAME </div>
+                <div class="tag"></div>
                 <div class="price">$60</div>
                 <div class="add-cart-btn">
-                    <div class="row">
-                        <div class="col-3" style="padding-right:0 ;">
-                            <div class="form-field-group">
-                                <mat-form-field>
-                                    <mat-select >
-                                        <mat-option value="1"> 1</mat-option>
-                                        <mat-option value="2"> 2</mat-option>
-                                        <mat-option value="3"> 3</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <div class="col-9" style="padding-left: 0;">
-                            <button class="btn btn-outline-primary">Add to cart</button>
-                        </div>
-                    </div>
-
-
+                    <button class="btn btn-outline-primary">Add to cart</button>
                 </div>
                 <div class="add-wishlist-btn">
                     <button class="btn btn-outline-primary">Add to wishlist</button>
