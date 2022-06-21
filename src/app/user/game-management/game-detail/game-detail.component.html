@@ -14,120 +14,141 @@
             </div>
         </div>
         <!-- big-banner -->
-        <h2>{{this.product.name}}</h2>
         <div class="row">
             <!-- left-collumn -->
             <div class="col-8">
-                <div class="big-banner">
-                    <img [src]="this.product.images[0].url">
-                </div>
+                <h2>{{product.name}}</h2>
+                <ngb-carousel [interval]="3000">
+                    <ng-template ngbSlide *ngFor="let img of this.product.images">
+                        <div class="big-banner">
+                            <img [src]="img.url" alt="Random first slide">
+                        </div>
+                    </ng-template>
+                </ngb-carousel>
                 <div class="size-box"></div>
                 <div class="game-detail">
                     <div class="description">
-                        <p>Dive into asdhasdasdhasukdhsadls hadkjashdkjsahdkjasdhaskjdhas kjdsahkdasjsadjkashdkja
-                            shdasdkjashdaskjdas khdasdhjskjaskadshkadshadsh</p>
+                        <p>{{[product.title]}}</p>
                     </div>
                     <div class="size-box"></div>
                     <div class="genres">
-                        <p>genres</p>
-                        <p>Action, Shooter, Adventure</p>
+                        <p>Type: {{product.type}}</p>
+                        <p>Tags: {{product.tag.toString()}}</p>
                     </div>
                     <div class="size-box"></div>
                     <div class="description">
-                        <p>Dive into asdhasdasdhasukdhsadls hadkjashdkjsahdkjasdhaskjdhas kjdsahkdasjsadjkashdkja
-                            shdasdkjashdaskjdas khdasdhjskjaskadshkadshadsh</p>
+                        <p>{{product.description}}</p>
                     </div>
-                    <!-- Add on -->
-                    <div class="size-box"></div>
-                    <div class="review">
-                        <h2>Edition</h2>
-                        <div class="game-detail-card">
-                            <div class="first-row">
-                                <div class="row">
-                                    <div class="col-4">
-                                        <img
-                                            src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-f2a7ae8676457d052c1344ce717dfb7a?h=854&resize=1&w=640">
+                    <!-- Editon -->
+                    <h2>Edition</h2>
+                    <ng-container *ngFor="let game of product.includes">
+                        <div class="edition">
+                            <div class="game-detail-card">
+                                <div class="first-row">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img [src]="game.images[0].url">
+                                        </div>
+                                        <div class="col-8">
+                                            <span class="edition-tag">
+                                                {{game.name}}
+                                            </span>
+                                            <div class="size-box"></div>
+                                            <div class="edition-description">
+                                                {{game.title}}
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-8">
-                                        <span class="tag">
-                                            EDITION
-                                        </span>
-                                        <span class="title">
-                                            Ultimate Edition
-                                        </span>
-                                        <div class="size-box"></div>
-                                        <div class="description">
-                                            asdasda a sdasdasdasdasd asdasdad asdasdasdsad asdasdasd asdasdasd asdasd
+                                    <div class="second-row">
+                                        <div class="row">
+                                            <div class="col-4"></div>
+                                            <div class="col-8"> <span>{{"$"+game.sale_price}}</span>
+                                                <button class="buy-btn" mat-button color="primary"
+                                                    (click)="this.nagivate(game._id)">Go to
+                                                    buy</button>
+                                                <button class="wishlist-btn" mat-button color="primary">Add to
+                                                    wishlist</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="second-row">
-                                <div class="row">
-                                    <div class="col-4">
 
-                                    </div>
-                                    <div class="col-8">
-                                        <span>$60</span>
-                                        <button class="buy-btn">BUY NOW</button>
-                                        <button class="wishlist-btn">ADD TO CART +</button>
-                                    </div>
-
-                                </div>
                             </div>
                         </div>
+                    </ng-container>
+                    <div class="edition">
+                        <h2>Add-on</h2>
+                        <ng-container *ngFor="let game of product.included_in">
+                            <div class="game-detail-card">
+                                <div class="first-row">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <img [src]="game.images[0].url">
+                                        </div>
+                                        <div class="col-8">
+                                            <span class="edition-tag">
+                                                {{game.name}}
+                                            </span>
+                                            <div class="size-box"></div>
+                                            <div class="edition-description">
+                                                {{game.title}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="second-row">
+                                        <div class="row">
+                                            <div class="col-4"></div>
+                                            <div class="col-8"> <span>{{"$"+game.sale_price}}</span>
+                                                <button class="buy-btn" mat-button color="primary"
+                                                    (click)="this.nagivate(game._id)">Go to
+                                                    buy</button>
+                                                <button class="wishlist-btn" mat-button color="primary">Add to
+                                                    wishlist</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </ng-container>
                     </div>
                 </div>
             </div>
             <!-- right-collumn -->
             <div class="col-4">
                 <div class="medium-banner">
-                    <img
-                        src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S2_1200x1600-f2a7ae8676457d052c1344ce717dfb7a?h=854&resize=1&w=640">
+                    <img [src]="this.product.images[0].url">
                 </div>
-                <div style="height:1rem"></div>
-                <div class="tag-card">BASE GAME </div>
-                <div class="price">$60</div>
                 <div class="add-cart-btn">
-                    <div class="row">
-                        <div class="col-3" style="padding-right:0 ;">
-                            <div class="form-field-group">
-                                <mat-form-field>
-                                    <mat-select >
-                                        <mat-option value="1"> 1</mat-option>
-                                        <mat-option value="2"> 2</mat-option>
-                                        <mat-option value="3"> 3</mat-option>
-                                    </mat-select>
-                                </mat-form-field>
-                            </div>
-
-                        </div>
-                        <div class="col-9" style="padding-left: 0;">
-                            <button class="btn btn-outline-primary">Add to cart</button>
-                        </div>
-                    </div>
-
-
+                    <button class="btn btn-outline-primary">Add to cart</button>
                 </div>
                 <div class="add-wishlist-btn">
                     <button class="btn btn-outline-primary">Add to wishlist</button>
                 </div>
                 <div class="brief">
                     <div class="row">
-                        <div class="col">Dev</div>
-                        <div class="col" style="text-align: right;">Dev</div>
+                        <div class="col">Price:</div>
+                        <div class="col" style="text-align: right;">{{"$"+product.sale_price}}</div>
                     </div>
                     <div class="row">
-                        <div class="col">Dev</div>
-                        <div class="col" style="text-align: right;">Dev</div>
+                        <div class="col">Count:</div>
+                        <div class="col" style="text-align: right;">{{this.showCountKey()}}</div>
                     </div>
                     <div class="row">
-                        <div class="col">Dev</div>
-                        <div class="col" style="text-align: right;">Dev</div>
+                        <div class="col">Developer:</div>
+                        <div class="col" style="text-align: right;">{{product.developer}}</div>
                     </div>
                     <div class="row">
-                        <div class="col">Dev</div>
-                        <div class="col" style="text-align: right;">Dev</div>
+                        <div class="col">Publisher:</div>
+                        <div class="col" style="text-align: right;">{{product.publisher}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Platform</div>
+                        <div class="col" style="text-align: right;">{{product.platform}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">Release date</div>
+                        <div class="col" style="text-align: right;">{{product.release_date}}</div>
                     </div>
                 </div>
             </div>
