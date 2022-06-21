@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { GameLoginComponent } from '../game-login/game-login.component';
 import { Collection } from "../../../models/collections.model";
 import { CollectionService } from 'src/app/services/collection.service';
 import { Subscription } from "rxjs";
+import { NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,14 +13,18 @@ import { Subscription } from "rxjs";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  public id: string;
+  public hotCollection: Collection;
   public topSaleCollection: Collection;
   public newReleaseCollection: Collection;
+  public mostPopularCollection: Collection;
+  public recentUpdateCollection: Collection;
   public subscription: Subscription = new Subscription();
-
-  constructor(public dialog: MatDialog,
-    public collectionService: CollectionService) { }
+  @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
+  constructor(
+    public dialog: MatDialog,
+    public collectionService: CollectionService,
+    public routerService: Router) { }
 
   ngOnInit(): void {
     this.loadData();
@@ -26,6 +32,9 @@ export class HomeComponent implements OnInit {
   loadData(): void {
     this.getTopSale();
     this.getNewRelease();
+    this.getHot();
+    this.getMostPopular();
+    this.getRecentlyUpdate();
   }
   getTopSale(): void {
     this.subscription = this.collectionService.getTopSaleCollection().subscribe(data => {
@@ -41,8 +50,35 @@ export class HomeComponent implements OnInit {
       console.log(error);
     })
   }
-  show(): void {
+  getHot(): void {
+    this.subscription = this.collectionService.getHotCollection().subscribe(data => {
+      this.hotCollection = data;
+    }, error => {
+      console.log(error);
+    })
+  }
+  getMostPopular(): void {
+    this.subscription = this.collectionService.getMostPopularCollection().subscribe(data => {
+      this.mostPopularCollection = data;
+    }, error => {
+      console.log(error);
+    })
+  }
+  getRecentlyUpdate(): void {
+    this.subscription = this.collectionService.getRecentlyUpdateCollection().subscribe(data => {
+      this.recentUpdateCollection = data;
+    }, error => {
+      console.log(error);
+    })
+  }
+  onSlide(slideEvent: NgbSlideEvent): void {
 
+  }
+  selectSlide(id: number): void {
+
+  }
+  nagivate(id: string): void {
+    this.routerService.navigateByUrl("games/" + id);
   }
   handleCarouselEvents(event: any) {
     console.log(event);
@@ -50,4 +86,6 @@ export class HomeComponent implements OnInit {
   openDialog() {
     this.dialog.open(GameLoginComponent);
   }
+
 }
+
