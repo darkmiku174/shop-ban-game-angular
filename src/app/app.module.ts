@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { GamesManagementModule } from 'src/module/cart-management/cart-management.module';
 //Component
+
 import { GamesManagementComponent } from './admin/game/games-management/games-management.component';
 import { GamesAddComponent } from './admin/game/games-add/games-add.component';
 import { GamesAddIncludeComponent } from './admin/game/games-add-include/games-add-include.component';
@@ -16,6 +17,9 @@ import { GamesAddKeyComponent } from './admin/game/games-add-key/games-add-key.c
 import { UserManagementComponent } from './admin/user/user-management/user-management.component';
 import { OrderManagementComponent } from './admin/order/order-management/order-management.component';
 import { CollectionManagementComponent } from './admin/collection/collection-management/collection-management.component';
+import { CollectionAddComponent } from './admin/collection/collection-add/collection-add.component';
+import { CollectionAddListgameComponent } from './admin/collection/collection-add-listgame/collection-add-listgame.component';
+import { CollectionDetailComponent } from './admin/collection/collection-detail/collection-detail.component';
 import { CartManagementComponent } from './admin/cart/cart-management/cart-management.component';
 import { VocherManagementComponent } from './admin/vocher/vocher-management/vocher-management.component';
 
@@ -47,6 +51,9 @@ import { ProductsService } from './services/products.service';
     UserManagementComponent,
     OrderManagementComponent,
     CollectionManagementComponent,
+    CollectionAddComponent,
+    CollectionAddListgameComponent,
+    CollectionDetailComponent,
     CartManagementComponent,
     VocherManagementComponent,
 
