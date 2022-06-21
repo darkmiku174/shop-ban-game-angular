@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from "../../../services/product.service";
 import { Product } from "../../../models/products.model";
 import { Subscription } from "rxjs";
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 @Component({
   selector: 'app-game-detail',
   templateUrl: './game-detail.component.html',
@@ -18,7 +17,6 @@ export class GameDetailComponent implements OnInit {
     public activetedRoute: ActivatedRoute,
     public productService: ProductService,
     public routerService: Router,
-    public location: Location
   ) { }
   ngOnInit(): void {
     this.loadData(this.activetedRoute.snapshot.params['id'])

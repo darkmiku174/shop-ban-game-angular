@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { GameLoginComponent } from '../game-login/game-login.component';
-import { ProductService } from "../../../services/product.service";
-import { Product } from "../../../models/products.model";
+import { GameLoginComponent } from '../user/game-management/game-login/game-login.component';
+import { ProductService } from "../services/product.service";
+import { Product } from "../models/products.model";
 import { Subscription } from "rxjs";
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -16,7 +16,9 @@ export class HeaderComponent implements OnInit {
   public subscription: Subscription = new Subscription();
   constructor(
     public dialog: MatDialog,
-    public productService: ProductService) { }
+    public productService: ProductService,
+    public routerService: Router,
+  ) { }
   openDialog() {
     this.dialog.open(GameLoginComponent);
   }
@@ -29,5 +31,14 @@ export class HeaderComponent implements OnInit {
     }, error => {
       console.log(error);
     })
+  }
+  nagivate(id: string): void {
+    this.routerService.navigateByUrl("games/" + id);
+  }
+  nagivateToHome(): void {
+    this.routerService.navigateByUrl("/");
+  }
+  nagivateToCart():void{
+    this.routerService.navigateByUrl("cart");
   }
 }

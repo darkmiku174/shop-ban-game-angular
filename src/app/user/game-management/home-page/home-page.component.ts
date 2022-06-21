@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { GameLoginComponent } from '../game-login/game-login.component';
 import { Collection } from "../../../models/collections.model";
 import { CollectionService } from 'src/app/services/collection.service';
@@ -9,10 +8,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomePageComponent implements OnInit {
   public id: string;
   public hotCollection: Collection;
   public topSaleCollection: Collection;
@@ -22,7 +21,6 @@ export class HomeComponent implements OnInit {
   public subscription: Subscription = new Subscription();
   @ViewChild('carousel', { static: true }) carousel: NgbCarousel;
   constructor(
-    public dialog: MatDialog,
     public collectionService: CollectionService,
     public routerService: Router) { }
 
@@ -83,9 +81,8 @@ export class HomeComponent implements OnInit {
   handleCarouselEvents(event: any) {
     console.log(event);
   }
-  openDialog() {
-    this.dialog.open(GameLoginComponent);
+  nagivateToSearch(): void {
+    this.routerService.navigate(['search'], { queryParams: { collection: "hot", name: "" } });
   }
-
 }
 

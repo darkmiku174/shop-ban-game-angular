@@ -74,12 +74,14 @@ body {
     position: relative;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: -6rem;
 }
 
 .game-card {
-    width: calc(25% - 20px);
+    width: calc(33% - 20px);
     height: 250px;
     position: relative;
+    margin-top:6rem;
 }
 
 .game-card img {
@@ -163,7 +165,7 @@ input .btn-check{
     background-color: transparent;
 }
 input[type='checkbox'] {
- 
+
 
 }
 

@@ -1,80 +1,45 @@
-<app-header></app-header>
 <body>
-    <div class="container">
-        <div class="size-box"></div>
-        <div class="row">
-            <div class="col-1">
-                <p class="category-text">Discover</p>
-            </div>
-            <div class="col-1">
-                <p class="category-text">Browse</p>
-            </div>
-            <div class="col-10">
-            </div>
-        </div>
-        <!-- Game card list -->
-        <div class="row">
-            <div class="col-9">
-                <div class="game-card-list">
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                        <div class="game-card-text">
-                            <p class="title">Among us</p>
-                            <p class="publisher">Sussy</p>
-                            <p class="price">40$</p>
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                        <div class="game-card-text">
-                            <p class="title">Among us</p>
-                            <p class="publisher">Sussy</p>
-                            <p class="price">40$</p>
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                        <div class="game-card-text">
-                            <p class="title">Among us</p>
-                            <p class="publisher">Sussy</p>
-                            <p class="price">40$</p>
-                        </div>
-                    </div>
-                    <div class="game-card">
-                        <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                        <div class="game-card-text">
-                            <p class="title">Among us</p>
-                            <p class="publisher">Sussy</p>
-                            <p class="price">40$</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="search-bar">
-                    <div class="search">
-                        <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
-                            search
-                        </mat-icon>
-                    </div>
-                    <input type="text" placeholder="Search...">
-                </div>
-                <div class="decorate"></div>
-                <div class="checkbox-group">
-                      <div class="btn-group" role="group">
-                    <label class="btn-primary" ngbButtonLabel>
-                      <input type="checkbox" class="btn-check" ngbButton > Left (pre-checked)
-                    </label>
-                    <label class="btn-primary" ngbButtonLabel>
-                      <input type="checkbox" class="btn-check" ngbButton> Middle
-                    </label>
-                    <label class="btn-primary" ngbButtonLabel>
-                      <input type="checkbox" class="btn-check" ngbButton > Right
-                    </label>
-                  </div>
-                </div>
-              
-            </div>
-        </div>
+  <div class="container">
+    <div class="size-box"></div>
+    <div class="row">
+      <div class="col-1">
+        <p class="category-text">Discover</p>
+      </div>
+      <div class="col-10">
+      </div>
     </div>
+    <!-- Game card list -->
+    <div class="row">
+      <div class="col-9">
+        <div class="game-card-list">
+          <div class="game-card" *ngFor="let game of products">
+            <img [src]="game.images[0].url">
+            <div class="game-card-text">
+              <p class="title">{{game.name}}</p>
+              <p class="price">{{"$"+game.sale_price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="search-bar">
+          <div class="search">
+            <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
+              search
+            </mat-icon>
+          </div>
+          <input type="text" placeholder="Search...">
+        </div>
+        <div class="decorate"></div>
+        <div class="checkbox-group">
+          <div class="btn-group" role="group">
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" class="btn-check" ngbButton> Left (pre-checked)
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </body>

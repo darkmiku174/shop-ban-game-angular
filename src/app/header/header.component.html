@@ -1,0 +1,36 @@
+<header class="header">
+  <mat-toolbar-row>
+    <div class="logo-container" (click)="this.nagivateToHome()">
+      <img src="https://i.imgur.com/AA4BrEc.png">
+    </div>
+    <div class="search-bar">
+      <div class="search">
+        <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
+          search
+        </mat-icon>
+      </div>
+      <input type="text" placeholder="Search..." [(ngModel)]="data">
+      <ng-container *ngFor="let product of this.products| filter:data; index as i">
+        <p *ngIf="i<5 && data !=null" (click)="this.nagivate(product._id)">{{product.name}}</p>
+      </ng-container>
+
+    </div>
+    <div class="icon-group">
+      <div class="shopping-cart">
+          <button (click)="this.nagivateToCart()">
+            <mat-icon class="shopping-cart" aria-hidden="false" aria-label="Example user verified icon">
+              shopping_cart
+            </mat-icon>
+          </button>
+      </div>
+      <div class="person">
+        <button (click)="openDialog()">
+          <mat-icon class="person" aria-hidden="false" aria-label="Example user verified icon">
+            person
+          </mat-icon>
+        </button>
+      </div>
+    </div>
+
+  </mat-toolbar-row>
+</header>
