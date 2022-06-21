@@ -6,8 +6,10 @@ import { GameSearchComponent } from './game-management/game-search/game-search.c
 import { GameCartComponent } from './game-management/game-cart/game-cart.component';
 import { GamePaymentComponent } from './game-management/game-payment/game-payment.component';
 import { GameLoginComponent } from './game-management/game-login/game-login.component';
-import {HomePageComponent} from './game-management/home-page/home-page.component';
-
+import { HomePageComponent } from './game-management/home-page/home-page.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import {HomePageComponent} from './game-management/home-page/home-page.component
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ]
 })
 export class GameManagementModule { }

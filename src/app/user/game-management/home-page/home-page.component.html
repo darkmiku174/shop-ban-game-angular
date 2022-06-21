@@ -4,7 +4,7 @@
     <div class="size-box"></div>
     <div class="row">
       <div class="col-1">
-        <p class="category-text" (click)="this.nagivateToSearch()">Discover</p>
+        <p class="category-text" (click)="this.nagivateToSearch('')">Discover</p>
       </div>
       <div class="col-10">
       </div>
@@ -38,7 +38,7 @@
     </div>
     <!-- top-sale -->
     <div class="size-box"></div>
-    <h2 class="category-title">Top sale</h2>
+    <h2 class="category-title" (click)="this.nagivateToSearch(this.topSaleCollection._id)">Top sale</h2>
     <div class="game-card-row">
       <div class="row">
         <ng-container *ngFor="let game of this.topSaleCollection.list_game; index as i">
@@ -57,7 +57,7 @@
     </div>
     <!-- New release -->
     <div class="size-box"></div>
-    <h2 class="category-title">New Release</h2>
+    <h2 class="category-title" (click)="this.nagivateToSearch(this.newReleaseCollection._id)">New Release</h2>
     <div class="game-card-row">
       <div class="row">
         <ng-container *ngFor="let game of this.newReleaseCollection.list_game; index as i">
@@ -77,7 +77,7 @@
     </div>
     <!-- Most Popular -->
     <div class="size-box"></div>
-    <h2 class="category-title">Most Popular</h2>
+    <h2 class="category-title" (click)="this.nagivateToSearch(this.mostPopularCollection._id)">Most Popular</h2>
     <div class="game-card-row">
       <div class="row">
         <ng-container *ngFor="let game of this.mostPopularCollection.list_game; index as i">
@@ -96,7 +96,7 @@
     </div>
     <!-- Recent Update -->
     <div class="size-box"></div>
-    <h2 class="category-title">Recent Update</h2>
+    <h2 class="category-title" (click)="this.nagivateToSearch(this.recentUpdateCollection._id)">Recent Update</h2>
     <div class="game-card-row">
       <div class="row">
         <ng-container *ngFor="let game of this.recentUpdateCollection.list_game; index as i">

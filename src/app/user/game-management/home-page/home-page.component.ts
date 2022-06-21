@@ -81,8 +81,8 @@ export class HomePageComponent implements OnInit {
   handleCarouselEvents(event: any) {
     console.log(event);
   }
-  nagivateToSearch(): void {
-    this.routerService.navigate(['search'], { queryParams: { collection: "hot", name: "" } });
+  nagivateToSearch(collection: string): void {
+    this.routerService.navigate(['search'], { queryParams: { collection: collection, name: "" } });
   }
 }
 

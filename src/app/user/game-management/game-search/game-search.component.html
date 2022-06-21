@@ -2,9 +2,6 @@
   <div class="container">
     <div class="size-box"></div>
     <div class="row">
-      <div class="col-1">
-        <p class="category-text">Discover</p>
-      </div>
       <div class="col-10">
       </div>
     </div>
@@ -12,13 +9,19 @@
     <div class="row">
       <div class="col-9">
         <div class="game-card-list">
-          <div class="game-card" *ngFor="let game of products">
+          <div class="game-card" *ngFor="let game of products |
+            paginate: {itemsPerPage: 6,
+              currentPage: page,
+              totalItems: totalLength} | filter: data" (click)="this.navigate(game._id)">
             <img [src]="game.images[0].url">
             <div class="game-card-text">
               <p class="title">{{game.name}}</p>
               <p class="price">{{"$"+game.sale_price}}</p>
             </div>
           </div>
+        </div>
+        <div style="margin-top:6rem">
+          <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
         </div>
       </div>
       <div class="col-3">
@@ -28,18 +31,19 @@
               search
             </mat-icon>
           </div>
-          <input type="text" placeholder="Search...">
+          <input type="text" placeholder="Search..." [(ngModel)]="data" (keypress)="this.setTotalPage(3)">
         </div>
         <div class="decorate"></div>
         <div class="checkbox-group">
           <div class="btn-group" role="group">
-            <label class="btn-primary" ngbButtonLabel>
-              <input type="checkbox" class="btn-check" ngbButton> Left (pre-checked)
+            <label class="btn-primary" ngbButtonLabel *ngFor="let collection of this.collections; index as i">
+              <input type="checkbox" class="btn-check" ngbButton
+                (click)="this.onChange(collection._id)">{{collection.name}}
             </label>
           </div>
         </div>
-
       </div>
     </div>
   </div>
+
 </body>

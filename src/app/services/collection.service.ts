@@ -11,6 +11,9 @@ export class CollectionService {
   getAllCollections(): Observable<Collection[]> {
     return this.http.get<Collection[]>(this.API)
   }
+  getCollectionById(id: string): Observable<Collection> {
+    return this.http.get<Collection>(this.API + id)
+  }
   getHotCollection(): Observable<Collection> {
     return this.http.get<Collection>(this.API + '61accfa63bd1a62f4346b907')
   }
