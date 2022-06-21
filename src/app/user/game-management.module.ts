@@ -8,7 +8,8 @@ import { GameCartComponent } from './game-management/game-cart/game-cart.compone
 import { GamePaymentComponent } from './game-management/game-payment/game-payment.component';
 import { GameLoginComponent } from './game-management/game-login/game-login.component';
 import { HeaderComponent } from './game-management/header/header.component';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { HeaderComponent } from './game-management/header/header.component';
   imports: [
     CommonModule,
     SharedModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ]
 })
 export class GameManagementModule { }

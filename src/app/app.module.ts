@@ -8,6 +8,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SharedModule } from './shared.module';
 import { GameManagementModule } from './user/game-management.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
+    Ng2SearchPipeModule,
+    FormsModule
     // ProductManagementModule,
     // RouterModule.forRoot(appRoutes)
   ],

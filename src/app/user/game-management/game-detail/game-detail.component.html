@@ -1,159 +1,185 @@
 <app-header></app-header>
 
 <body>
-    <div class="container">
-        <div class="size-box"></div>
-        <div class="row">
-            <div class="col-1">
-                <p class="category-text">Discover</p>
-            </div>
-            <div class="col-1">
-                <p class="category-text">Browse</p>
-            </div>
-            <div class="col-10">
-            </div>
-        </div>
-        <!-- big-banner -->
-        <div class="row">
-            <!-- left-collumn -->
-            <div class="col-8">
-                <h2>{{product.name}}</h2>
-                <ngb-carousel [interval]="3000">
-                    <ng-template ngbSlide *ngFor="let img of this.product.images">
-                        <div class="big-banner">
-                            <img [src]="img.url" alt="Random first slide">
-                        </div>
-                    </ng-template>
-                </ngb-carousel>
-                <div class="size-box"></div>
-                <div class="game-detail">
-                    <div class="description">
-                        <p>{{[product.title]}}</p>
-                    </div>
-                    <div class="size-box"></div>
-                    <div class="genres">
-                        <p>Type: {{product.type}}</p>
-                        <p>Tags: {{product.tag.toString()}}</p>
-                    </div>
-                    <div class="size-box"></div>
-                    <div class="description">
-                        <p>{{product.description}}</p>
-                    </div>
-                    <!-- Editon -->
-                    <h2>Edition</h2>
-                    <ng-container *ngFor="let game of product.includes">
-                        <div class="edition">
-                            <div class="game-detail-card">
-                                <div class="first-row">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <img [src]="game.images[0].url">
-                                        </div>
-                                        <div class="col-8">
-                                            <span class="edition-tag">
-                                                {{game.name}}
-                                            </span>
-                                            <div class="size-box"></div>
-                                            <div class="edition-description">
-                                                {{game.title}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="second-row">
-                                        <div class="row">
-                                            <div class="col-4"></div>
-                                            <div class="col-8"> <span>{{"$"+game.sale_price}}</span>
-                                                <button class="buy-btn" mat-button color="primary"
-                                                    (click)="this.nagivate(game._id)">Go to
-                                                    buy</button>
-                                                <button class="wishlist-btn" mat-button color="primary">Add to
-                                                    wishlist</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </ng-container>
-                    <div class="edition">
-                        <h2>Add-on</h2>
-                        <ng-container *ngFor="let game of product.included_in">
-                            <div class="game-detail-card">
-                                <div class="first-row">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <img [src]="game.images[0].url">
-                                        </div>
-                                        <div class="col-8">
-                                            <span class="edition-tag">
-                                                {{game.name}}
-                                            </span>
-                                            <div class="size-box"></div>
-                                            <div class="edition-description">
-                                                {{game.title}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="second-row">
-                                        <div class="row">
-                                            <div class="col-4"></div>
-                                            <div class="col-8"> <span>{{"$"+game.sale_price}}</span>
-                                                <button class="buy-btn" mat-button color="primary"
-                                                    (click)="this.nagivate(game._id)">Go to
-                                                    buy</button>
-                                                <button class="wishlist-btn" mat-button color="primary">Add to
-                                                    wishlist</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </ng-container>
-                    </div>
-                </div>
-            </div>
-            <!-- right-collumn -->
-            <div class="col-4">
-                <div class="medium-banner">
-                    <img [src]="this.product.images[0].url">
-                </div>
-                <div class="add-cart-btn">
-                    <button class="btn btn-outline-primary">Add to cart</button>
-                </div>
-                <div class="add-wishlist-btn">
-                    <button class="btn btn-outline-primary">Add to wishlist</button>
-                </div>
-                <div class="brief">
-                    <div class="row">
-                        <div class="col">Price:</div>
-                        <div class="col" style="text-align: right;">{{"$"+product.sale_price}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">Count:</div>
-                        <div class="col" style="text-align: right;">{{this.showCountKey()}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">Developer:</div>
-                        <div class="col" style="text-align: right;">{{product.developer}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">Publisher:</div>
-                        <div class="col" style="text-align: right;">{{product.publisher}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">Platform</div>
-                        <div class="col" style="text-align: right;">{{product.platform}}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col">Release date</div>
-                        <div class="col" style="text-align: right;">{{product.release_date}}</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="container">
+    <div class="size-box"></div>
+    <div class="row">
+      <div class="col-1">
+        <p class="category-text">Discover</p>
+      </div>
+      <div class="col-1">
+        <p class="category-text">Browse</p>
+      </div>
+      <div class="col-10">
+      </div>
     </div>
+    <h2>{{product.name}}</h2>
+    <!-- big-banner -->
+    <div class="row">
+      <!-- left-collumn -->
+      <div class="col-8">
+
+        <ngb-carousel [interval]="3000">
+          <ng-template ngbSlide *ngFor="let img of this.product.images">
+            <div class="big-banner">
+              <img [src]="img.url" alt="Random first slide">
+            </div>
+          </ng-template>
+        </ngb-carousel>
+        <div class="size-box"></div>
+        <div class="game-detail">
+          <div class="description">
+            <p>{{[product.title]}}</p>
+          </div>
+          <div class="size-box"></div>
+          <div class="genres">
+            <p>Type: {{product.type}}</p>
+            <p>Tags: {{product.tag.toString()}}</p>
+          </div>
+          <div class="size-box"></div>
+          <div class="description">
+            <p>{{product.description}}</p>
+          </div>
+          <!-- Editon -->
+          <div class="size-box"></div>
+
+          <!-- repeated-card -->
+          <ng-container *ngFor="let game of product.includes">
+            <div class="edition">
+              <h2>Edition</h2>
+              <div class="game-detail-card">
+                <div class="first-row">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        [src]="game.images[0].url">
+                    </div>
+                    <div class="col-8">
+                      <span class="tag">
+                        {{game.name}}
+                      </span>
+                      <span class="title">
+                        {{game.shortName }}
+                      </span>
+                      <div class="size-box"></div>
+                      <div class="description">
+                        {{game.title}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="second-row">
+                  <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-8">
+                      <span>{{"$"+game.sale_price}}</span>
+                      <button class="buy-btn" (click)="this.nagivate(game._id)">BUY NOW</button>
+                      <button class="wishlist-btn">ADD TO CART +</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+          <ng-container *ngFor="let game of product.included_in">
+            <div class="edition">
+              <h2>Add-On</h2>
+              <div class="game-detail-card">
+                <div class="first-row">
+                  <div class="row">
+                    <div class="col-4">
+                      <img
+                        [src]="game.images[0].url">
+                    </div>
+                    <div class="col-8">
+                      <span class="tag">
+                        {{game.name}}
+                      </span>
+                      <span class="title">
+                        {{game.shortName }}
+                      </span>
+                      <div class="size-box"></div>
+                      <div class="description">
+                        {{game.title}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="second-row">
+                  <div class="row">
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-8">
+                      <span>{{"$"+game.sale_price}}</span>
+                      <button class="buy-btn" (click)="this.nagivate(game._id)">BUY NOW</button>
+                      <button class="wishlist-btn">ADD TO CART +</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      <!-- right-collumn -->
+      <div class="col-4">
+        <div class="medium-banner">
+          <img [src]="this.product.images[0].url">
+        </div>
+        <div class="add-cart-btn">
+          <div class="row">
+            <div class="col-3" style="padding-right:0 ;">
+              <div class="form-field-group">
+                <mat-form-field>
+                  <mat-select>
+                    <mat-option *ngFor="let key in this.showCountKey()">{{1}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+
+            </div>
+            <div class="col-9" style="padding-left: 0;">
+              <button class="btn btn-outline-primary">Add to cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="add-wishlist-btn">
+          <button class="btn btn-outline-primary">Add to wishlist</button>
+        </div>
+        <div class="brief">
+          <div class="row">
+            <div class="col">Price:</div>
+            <div class="col" style="text-align: right;">{{"$"+product.sale_price}}</div>
+          </div>
+          <div class="row">
+            <div class="col">Count:</div>
+            <div class="col" style="text-align: right;">{{this.showCountKey()}}</div>
+          </div>
+          <div class="row">
+            <div class="col">Developer:</div>
+            <div class="col" style="text-align: right;">{{product.developer}}</div>
+          </div>
+          <div class="row">
+            <div class="col">Publisher:</div>
+            <div class="col" style="text-align: right;">{{product.publisher}}</div>
+          </div>
+          <div class="row">
+            <div class="col">Platform</div>
+            <div class="col" style="text-align: right;">{{product.platform}}</div>
+          </div>
+          <div class="row">
+            <div class="col">Release date</div>
+            <div class="col" style="text-align: right;">{{product.release_date}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 <footer>

@@ -6,7 +6,8 @@
                     search
                 </mat-icon>
             </div>
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Search..." [(ngModel)]="data">
+            <p style="color:white;z-index: 2;" *ngFor="let product of this.products| filter:data" >{{product.name}}</p>
         </div>
         <div class="icon-group">
             <div class="shopping-cart">
