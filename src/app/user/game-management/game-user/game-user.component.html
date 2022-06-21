@@ -1,0 +1,111 @@
+<app-header></app-header>
+
+<body>
+    <div class="container">
+        <div style="height: 2rem;"></div>
+        <div class="tab-container">
+            <mat-tab-group mat-align-tabs="start">
+                <mat-tab class="account" label="Account">
+                    <div class="container">
+                        <div class="account-info">
+                            <h2>Account Info</h2>
+                            <div class="row">
+                                <!-- left col -->
+                                <div class="col-6">
+                                    <div><label>Email</label></div>
+                                    <input class="email" type="email" disabled="disabled" placeholder="email">
+                                    <button>asd</button>
+                                </div>
+                                <!-- right col -->
+                                <div class="col-6">
+                                    <div><label>Password</label></div>
+                                    <input class="email" type="password" disabled="disabled">
+                                    <button>asd</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-info">
+                            <h2>Personal Detail</h2>
+                            <div class="row">
+                                <!-- left col -->
+                                <div class="col-6">
+                                    <div><label>First Name</label></div>
+                                    <input class="email" type="email" disabled="disabled" placeholder="email">
+                                    <button>asd</button>
+                                </div>
+                                <!-- right col -->
+                                <div class="col-6">
+                                    <div><label>Last Nmae</label></div>
+                                    <input class="email" type="email" disabled="disabled" placeholder="email">
+                                    <button>asd</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- left col -->
+                                <div class="col-6">
+                                    <div><label>Phone Number</label></div>
+                                    <input class="email" type="email" disabled="disabled" placeholder="email">
+                                    <button>asd</button>
+                                </div>
+                                <!-- right col -->
+                                <div class="col-6">
+                                    <div><label>Birth Date</label></div>
+                                    <form class="row row-cols-sm-auto">
+                                        <div class="col-12">
+                                            <div class="input-group">
+                                                <input class="form-control" placeholder="yyyy-mm-dd" name="dp"
+                                                    ngbDatepicker #d="ngbDatepicker">
+                                                <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                                                    type="button"></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button>SAVE CHANGES</button>
+                            </div>
+                            <h2>Delete Account</h2>
+                            <div class="row">
+                                <button>DELETE ACCOUNT</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </mat-tab>
+                <mat-tab class="orders" label="Orders">
+                    <div class="container">
+                        <div class="game-detail">
+                            <h2>Ordered Games</h2>
+                            <div class="row">
+                                <!-- left col -->
+                                <div class="col-6">
+                                    <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
+                                </div>
+                                <!-- right col -->
+                                <div class="col-6">
+                                    <div class="payment-container">
+                                        <div>Title: FarCry 6</div>
+                                        <div>Publisher: Ubisoft</div>
+                                        <div style="height:2rem"></div>
+                                        <mat-expansion-panel>
+                                            <mat-expansion-panel-header>
+                                                <mat-panel-title>Voucher List</mat-panel-title>
+                                                <mat-panel-description></mat-panel-description>
+                                            </mat-expansion-panel-header>
+                                            <div class="voucher-card">XDASD <span>✅</span></div>
+                                            <div class="voucher-card">XDASD <span>❌</span></div>
+                                        </mat-expansion-panel>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</body>
+<footer></footer>
