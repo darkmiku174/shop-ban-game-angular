@@ -6,28 +6,28 @@
             <div class="row">
                 <div class="col-8">
                     <!-- Cart detail card -->
-                    <div class="cart-card">
+                    <div class="cart-card" *ngFor="let game of this.cart; index as i">
                         <div class="row">
                             <div class="col-4">
                                 <img
-                                    src="https://cdn1.epicgames.com/offer/611482b8586142cda48a0786eb8a127c/EGS_DeadbyDaylight_BehaviourInteractive_S1_2560x1440-9790e96a8d2a08325bd7b4dc70148127?h=270&resize=1&w=480">
+                                    [src]="game.product.images[0].url">
                             </div>
                             <div class="col-8">
                                 <div class="cart-detail">
                                     <div class="cart-detail-top">
-                                        <p class="title">Farcry</p>
+                                        <p class="title">{{game.product.name}}</p>
                                         <div style="height:8px"></div>
-                                        <p class="publisher">Ubisoft</p>
+                                        <p class="publisher">{{game.product.type}}</p>
                                         <div style="height:8px"></div>
-                                        <p class="price">$60</p>
+                                        <p class="price">{{"$"+game.product.sale_price}}</p>
                                     </div>
                                     <div class="cart-detail-bottom">
                                         <div class="increment-button">
-                                            <button class="increase-1" mat-button color="primary">-</button>
+                                            <button class="increase-1" mat-button color="primary" (click)="this.decreaseCount(i)">-</button>
                                             <div class="number">
-                                                1
+                                                {{game.count}}
                                             </div>
-                                            <button class="increase-2" mat-button color="primary">+</button>
+                                            <button class="increase-2" mat-button color="primary" (click)="this.increaseCount(i)">+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -41,16 +41,16 @@
                     <div class="cart-summary">
                         <p>Coupon</p>
                         <div class="coupon-card">
-                            $10 Discount
+                            0% Discount
                         </div>
                         <div class="decorate"> </div>
                         <div class="total">
                             <span>Total</span>
-                            <div class="price">$60</div>
+                            <div class="price">{{this.totalPrice()}}</div>
                         </div>
                     </div>
                     <div class="size-box"></div>
-                    <button class="checkout-btn" mat-button color="primary">PROCEED TO CHECKOUT</button>
+                    <button class="checkout-btn" mat-button color="primary" (click)="this.nagivate()">PROCEED TO CHECKOUT</button>
                 </div>
             </div>
         </div>

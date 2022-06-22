@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from "../../../services/product.service";
 import { Product } from "../../../models/products.model";
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./game-detail.component.css']
 })
 export class GameDetailComponent implements OnInit {
+  public cart: [{ product: Product, count: number }];
   public product: Product;
   public subscription: Subscription = new Subscription();
 
@@ -19,7 +20,8 @@ export class GameDetailComponent implements OnInit {
     public routerService: Router,
   ) { }
   ngOnInit(): void {
-    this.loadData(this.activetedRoute.snapshot.params['id'])
+    this.loadData(this.activetedRoute.snapshot.params['id']);
+    this.cart = JSON.parse(localStorage.getItem('cart') || '[]');
   }
   loadData(id: string): void {
     this.subscription = this.productService.getProductById(id).subscribe(data => {
@@ -36,13 +38,33 @@ export class GameDetailComponent implements OnInit {
     var result: number = 0;
     this.product.keys.forEach(key => {
       if (key.status) {
-        result ++;
+        result++;
       }
     });
     return result;
   }
   handleCarouselEvents(event: any) {
     console.log(event);
+  }
+  addToCart(): void {
+    for (let index = 0; index < this.cart.length; index++) {
+      if (this.cart[index].product._id === this.product._id) {
+        this.cart[index] = { product: this.cart[index].product, count: this.cart[index].count + 1 <= this.checkLimitCount(this.cart[index].product) ? this.cart[index].count + 1 : this.cart[index].count };
+        localStorage.setItem("cart", JSON.stringify(this.cart));
+        return;
+      }
+    }
+    this.cart.push({ product: this.product, count: 1 });
+    localStorage.setItem("cart", JSON.stringify(this.cart));
+  }
+  checkLimitCount(product: Product): number {
+    var result: number = 0;
+    product.keys.forEach(key => {
+      if (key.status) {
+        result++;
+      }
+    });
+    return result;
   }
 }
 

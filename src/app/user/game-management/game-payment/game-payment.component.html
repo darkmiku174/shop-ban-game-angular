@@ -1,52 +1,50 @@
-
 <body>
-    <div class="container">
-        <!-- Cart detail -->
-        <div class="size-box"></div>
-        <div class="row">
-            <div class="col-4">
-                <!-- Cart Details -->
-                <h2>Cart Details</h2>
-                <div class="cart-detail-list">
-                    <div class="cart-detail">
-                        <div class="row">
-                            <div class="col-6">
-                                <img src="https://picfiles.alphacoders.com/450/thumb-450591.jpg">
-                            </div>
-                            <div class="col-6">
-                                <p class="title">Far cry</p>
-                                <p class="publisher">Ubisoft</p>
-                                <p class="price">$60</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+  <div class="container">
+    <!-- Cart detail -->
+    <div class="size-box"></div>
+    <div class="row">
+      <div class="col-4">
+        <!-- Cart Details -->
+        <h2>Cart Details</h2>
+        <div class="cart-detail-list">
+          <div class="cart-detail">
+            <div class="row" *ngFor="let game of this.cart">
+              <div class="col-6">
+                <img [src]="game.product.images[0].url">
+              </div>
+              <div class="col-6">
+                <p class="title">{{game.product.name}}</p>
+                <p class="price">{{"$"+game.product.sale_price + " x "+game.count}}</p>
+              </div>
             </div>
-            <div class="col-8">
-                <!-- Payment method -->
-                <h2>Payment</h2>
-                <div class="payment-container">
-                    <span>Total: $60</span>
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>Stripe</mat-panel-title>
-                            <mat-panel-description></mat-panel-description>
-                        </mat-expansion-panel-header>
-                        <input type="text" placeholder="Card number">
-                        <button class="pay-btn" mat-button color="primary">PAY WITH STRIPE</button>
-                    </mat-expansion-panel>
+          </div>
 
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>Paypal</mat-panel-title>
-                            <mat-panel-description></mat-panel-description>
-                        </mat-expansion-panel-header>
-                        <input type="text" placeholder="Card number">
-                        <button class="pay-btn" mat-button color="primary">PAY WITH PAYPAL</button>
-                    </mat-expansion-panel>
-                </div>
-            </div>
         </div>
+      </div>
+      <div class="col-8">
+        <!-- Payment method -->
+        <h2>Payment</h2>
+        <div class="payment-container">
+          <span>Total: {{this.totalPrice()}}</span>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Stripe</mat-panel-title>
+              <mat-panel-description></mat-panel-description>
+            </mat-expansion-panel-header>
+            <input type="text" placeholder="Card number">
+            <button class="pay-btn" mat-button color="primary">PAY WITH STRIPE</button>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>Paypal</mat-panel-title>
+              <mat-panel-description></mat-panel-description>
+            </mat-expansion-panel-header>
+            <input type="text" placeholder="Card number">
+            <button class="pay-btn" mat-button color="primary">PAY WITH PAYPAL</button>
+          </mat-expansion-panel>
+        </div>
+      </div>
     </div>
+  </div>
 </body>

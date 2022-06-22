@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { GameLoginComponent } from '../game-login/game-login.component';
 import { Collection } from "../../../models/collections.model";
 import { CollectionService } from 'src/app/services/collection.service';
 import { Subscription } from "rxjs";
