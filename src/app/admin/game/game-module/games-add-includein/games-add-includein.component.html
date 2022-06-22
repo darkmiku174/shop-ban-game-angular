@@ -1,7 +1,5 @@
-
-
-<a style="width:20rem;" class="btn btn-primary" data-toggle="modal" href='#modal-id'>Danh sách game</a>
-<div class="modal fade" id="modal-id">
+<a style="width:20rem;" class="btn btn-primary" data-toggle="modal" href='#includein-modal'>Danh sách game</a>
+<div class="modal fade" id="includein-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,10 +7,11 @@
                 <h4 class="modal-title">Danh sách game</h4>
             </div>
             <div class="modal-body">
-                <button style="float:right" type="button" class="btn btn-default">button</button>
+                <!-- <button style="float:right" type="button" class="btn btn-default" (click)="onAddInclude(this.product)">button</button> -->
                 <div>search</div>
             </div>
             <div class="table-responsive">
+                <app-search-bar></app-search-bar>
                 <table class="table table-hover">
                     <thead>
                         <tr>

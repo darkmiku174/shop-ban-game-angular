@@ -1,24 +1,12 @@
-<div class="search">
-    <div class="searchInputs">
-        <input
-            style="text-transform: uppercase;"
-            type="text"
-            placeholder={placeholder}
-            value={wordEntered}
-            onChange={handleFilter}
-        />
-        <div class="searchIcon">
-            <i class="fa fa-sesarch"></i>
-        </div>
+    <div class="search-bar">
+      <div class="search">
+        <mat-icon class="search" aria-hidden="false" aria-label="Example user verified icon">
+          search
+        </mat-icon>
+      </div>
+      <input type="text" placeholder="Search..." [(ngModel)]="data">
+      <ng-container *ngFor="let product of this.products| filter:data; index as i">
+        <p *ngIf="i<5 && data !=null" (click)="this.nagivate(product._id)">{{product.name}}</p>
+      </ng-container>
+
     </div>
-    <!-- {filteredData.length != 0 && (
-        <div class="dataResult">
-            {filteredData.slice(0, 15).map((value, key) => {
-                return (
-                    <p onClick={() => onUpdate(value)}>{value.name}</p>
-                );
-            })}
-        </div>
-    )
-    } -->
-</div >

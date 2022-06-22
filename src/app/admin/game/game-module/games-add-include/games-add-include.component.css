@@ -1,0 +1,93 @@
+/* Search-bar */
+.search-bar {
+    width: 20rem;
+    position: relative;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    height: 40px;
+    padding-left: 50px;
+  
+  }
+  
+  .search-bar input {
+    background-color: gray;
+    border-radius: 5px;
+  
+  }
+  
+  .search-bar ::placeholder {
+    color: black;
+  }
+  
+  .search-bar .search mat-icon {
+    position: relative;
+    top: 38px;
+    left: 8px;
+    color: white;
+  }
+  
+  .shopping-cart mat-icon {
+    color: white;
+  }
+  
+  .person mat-icon {
+    color: white;
+  }
+  
+  .icon-group {
+    position: absolute;
+    top: 17px;
+    left: 88%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .icon-group button {
+    background-color: transparent;
+    border: none;
+    margin-left: 1rem;
+  }
+  
+  .icon-group button :hover {
+    color: gray;
+  }
+  
+  
+  .decorate {
+    width: 100%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid gray;
+  }
+  
+  .size-box {
+    height: 2rem;
+  }
+  
+  .header p {
+    color: black;
+    z-index: 2;
+    position: relative;
+    background-color: white;
+    margin: 0;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  .logo-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 40px;
+    position: absolute;
+  }
+  
+  .logo-container img {
+    width: 100%;
+    position: relative;
+  }
+  
+  .logo-container img:hover {
+    cursor: pointer;
+  }

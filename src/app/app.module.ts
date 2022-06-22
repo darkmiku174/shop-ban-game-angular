@@ -4,22 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { GamesManagementModule } from 'src/module/cart-management/cart-management.module';
+import { GameModuleModule } from './admin/game/game-module/game-module.module';
 //Component
 
-import { GamesManagementComponent } from './admin/game/games-management/games-management.component';
-import { GamesAddComponent } from './admin/game/games-add/games-add.component';
-import { GamesAddIncludeComponent } from './admin/game/games-add-include/games-add-include.component';
-import { GamesAddTagComponent } from './admin/game/games-add-tag/games-add-tag.component';
-import { GamesAddIncludeinComponent } from './admin/game/games-add-includein/games-add-includein.component';
-import { GameDetailComponent } from './admin/game/game-detail/game-detail.component';
-import { GamesAddKeyComponent } from './admin/game/games-add-key/games-add-key.component';
+
 import { UserManagementComponent } from './admin/user/user-management/user-management.component';
 import { OrderManagementComponent } from './admin/order/order-management/order-management.component';
-import { CollectionManagementComponent } from './admin/collection/collection-management/collection-management.component';
-import { CollectionAddComponent } from './admin/collection/collection-add/collection-add.component';
-import { CollectionAddListgameComponent } from './admin/collection/collection-add-listgame/collection-add-listgame.component';
-import { CollectionDetailComponent } from './admin/collection/collection-detail/collection-detail.component';
+
 import { CartManagementComponent } from './admin/cart/cart-management/cart-management.component';
 import { VocherManagementComponent } from './admin/vocher/vocher-management/vocher-management.component';
 
@@ -31,8 +22,9 @@ import { DeleteCollectionNotificationComponent } from './admin/notification/dele
 import { DeleteKeyNotificationComponent } from './admin/notification/delete-key-notification/delete-key-notification.component';
 import { DeleteProductNotificationComponent } from './admin/notification/delete-product-notification/delete-product-notification.component';
 import { DeleteUserNotificationComponent } from './admin/notification/delete-user-notification/delete-user-notification.component';
-import { SearchBarComponent } from './admin/searchbar/search-bar/search-bar.component';
 import { ProductsService } from './services/products.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CollectionService } from './services/collection.service';
 
 
 @NgModule({
@@ -40,20 +32,8 @@ import { ProductsService } from './services/products.service';
     AppComponent,
     MenuComponent,
     KeyAddComponent,
-
-    GamesManagementComponent,
-    GamesAddComponent,
-    GamesAddIncludeComponent,
-    GamesAddTagComponent,
-    GamesAddIncludeinComponent,
-    GameDetailComponent,
-    GamesAddKeyComponent,
     UserManagementComponent,
     OrderManagementComponent,
-    CollectionManagementComponent,
-    CollectionAddComponent,
-    CollectionAddListgameComponent,
-    CollectionDetailComponent,
     CartManagementComponent,
     VocherManagementComponent,
 
@@ -61,16 +41,17 @@ import { ProductsService } from './services/products.service';
     DeleteKeyNotificationComponent,
     DeleteProductNotificationComponent,
     DeleteUserNotificationComponent,
-    SearchBarComponent,
   ],
   imports: [
+    GameModuleModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
-    ProductsService
+    ProductsService,CollectionService
   ],
   bootstrap: [AppComponent]
 })
