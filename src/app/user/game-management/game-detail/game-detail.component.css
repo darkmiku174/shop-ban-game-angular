@@ -301,3 +301,13 @@ h2 {
 ::ng-deep .visually-hidden{
   display: none;
 }
+.game-number {
+  color: white;
+  position: relative;
+  width: 100%;
+  padding: 14px;
+  padding-left: 27px;
+  border-radius: 5px 0px 0px 5px;
+  margin-top: 16px;
+  border: 2px solid rgb(35, 105, 255);
+}

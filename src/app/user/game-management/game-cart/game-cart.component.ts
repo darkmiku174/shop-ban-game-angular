@@ -40,4 +40,8 @@ export class GameCartComponent implements OnInit {
   nagivate(): void {
     this.routerService.navigateByUrl("payment");
   }
+  removeItem(index: number): void {
+    this.cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(this.cart));
+  }
 }

@@ -11,6 +11,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule } from '@angular/forms';
+import { GoogleSiginService } from './services/google-signin.service';
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -26,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     Ng2SearchPipeModule,
     FormsModule
   ],
-  providers: [ProductService, CollectionService],
+  providers: [ProductService, CollectionService, GoogleSiginService],
   bootstrap: [AppComponent, HeaderComponent]
 })
 export class AppModule { }

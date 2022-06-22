@@ -13,6 +13,11 @@
                                     [src]="game.product.images[0].url">
                             </div>
                             <div class="col-8">
+                              <button
+                                    style="position:relative;float:right;width:3rem; background-color:rgb(72, 72, 72);
+                                    border: none;color: white;border-radius: 5px;margin-top: 1rem;margin-right: 1rem;"
+                                    (click)="this.removeItem(i)">X</button>
+
                                 <div class="cart-detail">
                                     <div class="cart-detail-top">
                                         <p class="title">{{game.product.name}}</p>

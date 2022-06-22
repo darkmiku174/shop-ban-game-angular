@@ -66,5 +66,14 @@ export class GameDetailComponent implements OnInit {
     });
     return result;
   }
+  showCountInCart(id: string): number {
+    var result: number = 0;
+    this.cart.forEach(game => {
+      if (game.product._id === id) {
+        result = game.count;
+      }
+    })
+    return result;
+  }
 }
 
