@@ -1,4 +1,3 @@
-
 <body>
   <div class="container">
     <div class="size-box"></div>
@@ -47,8 +46,7 @@
                 <div class="first-row">
                   <div class="row">
                     <div class="col-4">
-                      <img
-                        [src]="game.images[0].url">
+                      <img [src]="game.images[0].url">
                     </div>
                     <div class="col-8">
                       <span class="tag">
@@ -87,8 +85,7 @@
                 <div class="first-row">
                   <div class="row">
                     <div class="col-4">
-                      <img
-                        [src]="game.images[0].url">
+                      <img [src]="game.images[0].url">
                     </div>
                     <div class="col-8">
                       <span class="tag">
@@ -130,14 +127,9 @@
         <div class="add-cart-btn">
           <div class="row">
             <div class="col-3" style="padding-right:0 ;">
-              <div class="form-field-group">
-                <mat-form-field>
-                  <mat-select>
-                    <mat-option *ngFor="let key in this.showCountKey()">{{1}}</mat-option>
-                  </mat-select>
-                </mat-form-field>
+              <div class="game-number">
+                1
               </div>
-
             </div>
             <div class="col-9" style="padding-left: 0;">
               <button class="btn btn-outline-primary" (click)="this.addToCart()">Add to cart</button>

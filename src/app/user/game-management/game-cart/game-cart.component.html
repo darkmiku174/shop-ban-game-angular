@@ -9,8 +9,7 @@
                     <div class="cart-card" *ngFor="let game of this.cart; index as i">
                         <div class="row">
                             <div class="col-4">
-                                <img
-                                    [src]="game.product.images[0].url">
+                                <img [src]="game.product.images[0].url">
                             </div>
                             <div class="col-8">
                                 <div class="cart-detail">
@@ -23,11 +22,13 @@
                                     </div>
                                     <div class="cart-detail-bottom">
                                         <div class="increment-button">
-                                            <button class="increase-1" mat-button color="primary" (click)="this.decreaseCount(i)">-</button>
+                                            <button class="increase-1" mat-button color="primary"
+                                                (click)="this.decreaseCount(i)">-</button>
                                             <div class="number">
                                                 {{game.count}}
                                             </div>
-                                            <button class="increase-2" mat-button color="primary" (click)="this.increaseCount(i)">+</button>
+                                            <button class="increase-2" mat-button color="primary"
+                                                (click)="this.increaseCount(i)">+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -39,18 +40,19 @@
                 <div class="col-4">
                     <!-- Cart detail summary -->
                     <div class="cart-summary">
-                        <p>Coupon</p>
+                        <p style="color: white">Coupon</p>
                         <div class="coupon-card">
                             0% Discount
                         </div>
                         <div class="decorate"> </div>
                         <div class="total">
-                            <span>Total</span>
+                            <span style="color:white;">Total</span>
                             <div class="price">{{this.totalPrice()}}</div>
                         </div>
                     </div>
                     <div class="size-box"></div>
-                    <button class="checkout-btn" mat-button color="primary" (click)="this.nagivate()">PROCEED TO CHECKOUT</button>
+                    <button class="checkout-btn" mat-button color="primary" (click)="this.nagivate()">PROCEED TO
+                        CHECKOUT</button>
                 </div>
             </div>
         </div>
